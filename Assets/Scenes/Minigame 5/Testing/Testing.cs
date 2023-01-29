@@ -1,0 +1,176 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Threading;
+using UnityEditor.SearchService;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+public class Testing : MonoBehaviour
+{
+    public static Protect checkpoint;
+
+    GameObject first, second, third, fourth, fifth, sixth;
+
+    public int[] choiceArray = new int[6];
+    public int count = 0;
+    public Text chooseText;
+    public Text SceneR2;
+
+
+
+    public void onClickchoice1()
+    {
+
+        if (count < 3)
+        {
+            if (choiceArray[0] == 0)
+            {
+                choiceArray[0] = 1;
+                count++;
+
+            }
+            else
+            {
+                choiceArray[0] = 0;
+                count--;
+            }
+
+            Debug.Log(choiceArray[0] + "" + choiceArray[1] + "" + choiceArray[2] + "" + choiceArray[3] + "" + choiceArray[4] + "" + choiceArray[5]);
+            Debug.Log(count);
+            chooseText.text = count.ToString();
+        }
+
+    }
+
+    public void onClickchoice2()
+
+    {
+
+        if (count < 3)
+        {
+            if (choiceArray[1] == 0)
+            {
+                choiceArray[1] = 1;
+                count++;
+            }
+            else
+            {
+                choiceArray[1] = 0;
+                count--;
+            }
+            Debug.Log(choiceArray[0] + "" + choiceArray[1] + "" + choiceArray[2] + "" + choiceArray[3] + "" + choiceArray[4] + "" + choiceArray[5]);
+            Debug.Log(count);
+            chooseText.text = count.ToString();
+        }
+    }
+
+    public void onClickchoice3()
+    {
+
+        if (count < 3)
+        {
+            if (choiceArray[2] == 0)
+            {
+                choiceArray[2] = 1;
+                count++;
+            }
+            else
+            {
+                choiceArray[2] = 0;
+                count--;
+            }
+            Debug.Log(choiceArray[0] + "" + choiceArray[1] + "" + choiceArray[2] + "" + choiceArray[3] + "" + choiceArray[4] + "" + choiceArray[5]);
+            Debug.Log(count);
+            chooseText.text = count.ToString();
+        }
+    }
+
+
+    public void onClickchoice4()
+    {
+        if (count < 3)
+        {
+            if (choiceArray[3] == 0)
+            {
+                choiceArray[3] = 1;
+                count++;
+            }
+            else
+            {
+                choiceArray[3] = 0;
+                count--;
+            }
+            Debug.Log(choiceArray[0] + "" + choiceArray[1] + "" + choiceArray[2] + "" + choiceArray[3] + "" + choiceArray[4] + "" + choiceArray[5]);
+            Debug.Log(count);
+            chooseText.text = count.ToString();
+        }
+    }
+
+    public void onClickchoice5()
+    {
+        if (count < 3)
+        {
+            if (choiceArray[4] == 0)
+            {
+                choiceArray[4] = 1;
+                count++;
+            }
+            else
+            {
+                choiceArray[4] = 0;
+                count--;
+            }
+            Debug.Log(choiceArray[0] + "" + choiceArray[1] + "" + choiceArray[2] + "" + choiceArray[3] + "" + choiceArray[4] + "" + choiceArray[5]);
+            Debug.Log(count);
+            chooseText.text = count.ToString();
+        }
+    }
+
+    public void onClickchoice6()
+    {
+
+        if (count < 3)
+        {
+            if (choiceArray[5] == 0)
+            {
+                choiceArray[5] = 1;
+                count++;
+            }
+            else
+            {
+                choiceArray[5] = 0;
+                count--;
+            }
+            Debug.Log(choiceArray[0] + "" + choiceArray[1] + "" + choiceArray[2] + "" + choiceArray[3] + "" + choiceArray[4] + "" + choiceArray[5]);
+            Debug.Log(count);
+            chooseText.text = count.ToString();
+        }
+    }
+
+
+
+    public void LoadSceneT2()
+    {
+        SceneManager.LoadScene("T2");
+        PlayerPrefs.SetInt("data0", choiceArray[0]);
+        PlayerPrefs.SetInt("data1", choiceArray[1]);
+        PlayerPrefs.SetInt("data2", choiceArray[2]);
+        PlayerPrefs.SetInt("data3", choiceArray[3]);
+        PlayerPrefs.SetInt("data4", choiceArray[4]);
+        PlayerPrefs.SetInt("data5", choiceArray[5]);
+    }
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
