@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{77BD69FB-787A-EE95-C7A4-CB12C55E5CD6}</ProjectGuid>
+    <ProjectGuid>{0F5283C0-E89B-267B-D414-89026E3E5740}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -60,6 +60,8 @@
     <Compile Include="Assets\Scenes\Minigame 5\Design\DQuestion.cs" />
     <Compile Include="Assets\Scenes\Minigame 5\Testing\Testing.cs" />
     <Compile Include="Assets\Scenes\Story Telling\Teamsetup.cs" />
+    <Compile Include="Assets\Scenes\Story Telling\M4.cs" />
+    <Compile Include="Assets\Scenes\Developer\DevIntro.cs" />
     <Compile Include="Assets\Scripts\DragDrop.cs" />
     <Compile Include="Assets\Scenes\Minigame 5\Design\D2.cs" />
     <Compile Include="Assets\Scripts\ButtonOnClick.cs" />
@@ -86,8 +88,6 @@
     <Compile Include="Assets\Scenes\Story Telling\ProjectRequirement.cs" />
     <Compile Include="Assets\UI\Minigame 3\play2.cs" />
     <Compile Include="Assets\UI\Minigame 2\play.cs" />
-    <Compile Include="Assets\Scenes\Developer\DevIntro.cs" />
-    <Compile Include="Assets\Scenes\Story Telling\M4.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AurynSky\Gems Ultimate Pack\READ ME.txt" />
