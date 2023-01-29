@@ -17,6 +17,7 @@ public class Quest : MonoBehaviour
     public Vector3 LoadPos;
 
 
+
     public void OnTriggerEnter(Collider Target)
 
     {
