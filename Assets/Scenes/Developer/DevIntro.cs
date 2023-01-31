@@ -6,10 +6,11 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class DevIntro : MonoBehaviour
 {
+    public GameObject video1, video2;
     public string teamname;
     public Text teamnameText;
     public Text text;
-    public GameObject chatbox;
+    public GameObject chatbox,chatbox2;
     // Start is called before the first frame update
 
 
@@ -21,6 +22,15 @@ public class DevIntro : MonoBehaviour
         teamnameText.text = teamname;
 
     }
+    public void openChatbox2()
+    {
+
+
+        chatbox2.SetActive(true);
+        teamnameText.text = teamname;
+
+    }
+
     public void DevIntroconfirm()
     {
         SceneManager.LoadScene("office");
@@ -29,8 +39,32 @@ public class DevIntro : MonoBehaviour
     {
         SceneManager.LoadScene("DevIntro");
     }
+    public void startM4()
+    { 
+        video1.SetActive(false);
+        video2.SetActive(true);
+        chatbox.SetActive(false);
+        Invoke("openChatbox2", 1.0f);
+       
+    }
+    public void startM4part2()
+    {
+        SceneManager.LoadScene("Minigame 4");
+
+    }
+    public void endmini4()
+    {
+        SceneManager.LoadScene("office");
+    }
 
 
+
+    public void StartM5()
+    {
+
+        SceneManager.LoadScene("1DayPart1");
+
+    }
 
     void Start()
     {

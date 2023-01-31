@@ -83,7 +83,7 @@ public class Quest : MonoBehaviour
                 
                 savePositionDev();
                 i++;
-                SceneManager.LoadScene("Minigame 4");
+                SceneManager.LoadScene("Start Minigame 4");
                
                 PlayerPrefs.SetInt("MNo", i);
                 Mission[i].SetActive(true);
@@ -95,7 +95,7 @@ public class Quest : MonoBehaviour
                
                 savePositionDev();
                 i =0;
-                SceneManager.LoadScene("Project Requirement");
+                SceneManager.LoadScene("Scrum Intro");
                 
                 PlayerPrefs.SetInt("MNo", i);
                 Mission[i].SetActive(true);

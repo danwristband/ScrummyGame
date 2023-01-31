@@ -7,7 +7,7 @@ public class M4 : MonoBehaviour
 {   
     public void endM4()
     {
-        SceneManager.LoadScene("office");
+        SceneManager.LoadScene("End Minigame4");
     } 
     // Start is called before the first frame update
     void Start()
