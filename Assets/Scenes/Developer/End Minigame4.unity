@@ -570,10 +570,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19267cdf0b256574ca6f69c4ef87f173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  video1: {fileID: 0}
+  video2: {fileID: 0}
   teamname: 
   teamnameText: {fileID: 0}
   text: {fileID: 1913349466}
   chatbox: {fileID: 69039165}
+  chatbox2: {fileID: 0}
 --- !u!114 &1330778488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -833,7 +836,7 @@ VideoPlayer:
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
-  m_Looping: 1
+  m_Looping: 0
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []

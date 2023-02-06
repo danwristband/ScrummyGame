@@ -63,7 +63,7 @@ public class LevelManager : MonoBehaviour
 
     public void skipminigame1()
     {
-        SceneManager.LoadScene("Finute resouremanagement");
+        SceneManager.LoadScene("Score");
         
     }
 

@@ -129,7 +129,8 @@ public class play : MonoBehaviour
             pass.text = "Pass" ;
             Debug.Log("Pass");
             Debug.Log(score);
-            SceneManager.LoadScene("Finite Userstory");
+            PlayerPrefs.SetInt("scDisplay", score);
+            SceneManager.LoadScene("Score");
         }
 
         else if (true)
