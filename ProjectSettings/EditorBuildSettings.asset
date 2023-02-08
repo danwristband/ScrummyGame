@@ -60,11 +60,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Developer/End Minigame4.unity
     guid: 29b55733b2d0cb5469b459e3b9f00388
   - enabled: 1
+    path: Assets/Scenes/Developer/Scrum/FirstSprint.unity
+    guid: ff2baa5f6113b104d89e2e9e165045e7
+  - enabled: 1
     path: Assets/Scenes/Developer/Scrum/Scrum Intro.unity
     guid: f3ece013c35dd3a44bd5914799d8c369
   - enabled: 1
     path: Assets/Scenes/Developer/Scrum/1DayPart1.unity
     guid: d605d6d5aa466b1478f325c82522636d
+  - enabled: 1
+    path: Assets/Scenes/Developer/Scrum/Daily Meeting.unity
+    guid: ed0a28453406ba84895468d43d639aae
   - enabled: 1
     path: Assets/Scenes/Minigame 5/Requirement/Requiement.unity
     guid: 21748e6d0c6542746b503296f592a902
@@ -125,4 +131,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Score.unity
     guid: f1c6cb6483e6f144e84d5562f47d919e
+  - enabled: 1
+    path: Assets/Scenes/Developer/Scrum/oneday.unity
+    guid: 56a4d98b8f6b1ac4690292c7069bd4be
+  - enabled: 1
+    path: Assets/Scenes/Minigame 5/Phase/SceneP/Require1.unity
+    guid: 301ac03f8e0d8aa4e9422e97b70b4c69
+  - enabled: 1
+    path: Assets/Scenes/Minigame 5/Phase/SceneP/Require2.unity
+    guid: b89a614d72cf5674699c7dbc03383c19
   m_configObjects: {}

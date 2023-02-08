@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Quest.cs" />
     <Compile Include="Assets\Scenes\Minigame 5\Design\DQuestion.cs" />
+    <Compile Include="Assets\Scenes\Developer\problem.cs" />
     <Compile Include="Assets\Scenes\Minigame 5\Testing\Testing.cs" />
     <Compile Include="Assets\Scenes\Story Telling\Teamsetup.cs" />
     <Compile Include="Assets\Scenes\Story Telling\M4.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Assets\AurynSky\Gems Ultimate Pack\Scripts\AnimationScript.cs" />
     <Compile Include="Assets\Scenes\Minigame 5\Development\Development.cs" />
     <Compile Include="Assets\Scenes\Minigame 5\Testing\T2.cs" />
+    <Compile Include="Assets\Score.cs" />
     <Compile Include="Assets\Scenes\Minigame 5\Design\DProtect.cs" />
     <Compile Include="Assets\Scripts\InventorySlot.cs" />
     <Compile Include="Assets\Scripts\GameCtrl.cs" />
@@ -81,14 +83,15 @@
     <Compile Include="Assets\Scenes\Minigame 5\Requirement\Protect.cs" />
     <Compile Include="Assets\UI\Minigame 3\test2.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
+    <Compile Include="Assets\Scenes\Minigame 5\Phase\SceneP\SceneP.cs" />
     <Compile Include="Assets\Scenes\Minigame 5\Testing\TQuestion.cs" />
     <Compile Include="Assets\Scripts\grid_manager.cs" />
+    <Compile Include="Assets\Scenes\Developer\Sprint1.cs" />
     <Compile Include="Assets\Scenes\Story Telling\GameStart.cs" />
     <Compile Include="Assets\Scenes\Story Telling\GameMode.cs" />
     <Compile Include="Assets\Scenes\Story Telling\ProjectRequirement.cs" />
     <Compile Include="Assets\UI\Minigame 3\play2.cs" />
     <Compile Include="Assets\UI\Minigame 2\play.cs" />
-    <Compile Include="Assets\Score.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AurynSky\Gems Ultimate Pack\READ ME.txt" />

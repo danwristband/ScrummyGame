@@ -19,7 +19,7 @@ MonoBehaviour:
   m_StartFrame: 1
   m_EndFrame: 0
   m_StartTime: 0
-  m_EndTime: 10
+  m_EndTime: 30
   m_CapFrameRate: 1
   m_RecorderSettings:
   - {fileID: 2}
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: Movie
   m_EditorClassIdentifier: 
   enabled: 1
-  take: 33
+  take: 38
   captureEveryNthFrame: 1
   fileNameGenerator:
     m_Path:

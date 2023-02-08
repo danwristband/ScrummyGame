@@ -65,12 +65,38 @@ public class DevIntro : MonoBehaviour
         SceneManager.LoadScene("1DayPart1");
 
     }
+    public void problem()
+    {
+
+        SceneManager.LoadScene("oneday");
+
+    }
+
+    public void dailyMeeting()
+    {
+        SceneManager.LoadScene("Daily Meeting");
+    }
+
+    public void gotointro()
+    {
+        SceneManager.LoadScene("Scrum Intro");
+    }
+
+    public void SprintReview()
+    {
+
+        SceneManager.LoadScene("Review intro");
+
+    }
+
 
     void Start()
     {
         teamname = PlayerPrefs.GetString("Teamname");
         Invoke("openChatbox", 1.0f);
 
+
+       
 
 
 

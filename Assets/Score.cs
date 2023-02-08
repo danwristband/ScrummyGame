@@ -38,8 +38,10 @@ public class Score : MonoBehaviour
         else if (MinigameNumber == 6)
         {
             SceneManager.LoadScene("Office");
-        }
+            
 
+        }
+        
 
     }
     public void excellentFn()
@@ -85,19 +87,19 @@ public class Score : MonoBehaviour
         switch (scoredisplay)
         {
             case 1:
-                Invoke("badFn", 5.0f);
+                Invoke("badFn", 3.0f);
                 break;
             case 2:
-                Invoke("poorFn", 5.0f);
+                Invoke("poorFn", 3.0f);
                 break;
             case 3:
-                Invoke("fairFn", 5.0f);
+                Invoke("fairFn", 3.0f);
                 break;
             case 4:
-                Invoke("goodFn", 5.0f);
+                Invoke("goodFn", 3.0f);
                 break;
             case 5:
-                Invoke("excellentFn", 5.0f);
+                Invoke("excellentFn", 3.0f);
                 break;
 
         }
