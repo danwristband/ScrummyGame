@@ -67,6 +67,7 @@ public class T2 : MonoBehaviour
         {
 
             SceneR2.text = "Pass";
+            SceneManager.LoadScene("Test2");
         }
         else if (choiceArray[1] == 1 && choiceArray[2] == 1)
         {

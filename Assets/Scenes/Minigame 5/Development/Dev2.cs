@@ -66,6 +66,7 @@ public class Dev2 : MonoBehaviour
         {
 
             SceneDev2.text = "Pass";
+            SceneManager.LoadScene("Dev22");
         }
         else if (choiceArray[0] == 1 && choiceArray[1] == 1)
         {

@@ -62,7 +62,7 @@ public class DevIntro : MonoBehaviour
     public void StartM5()
     {
 
-        SceneManager.LoadScene("1DayPart1");
+        SceneManager.LoadScene("FirstSprint");
 
     }
     public void problem()
@@ -87,6 +87,45 @@ public class DevIntro : MonoBehaviour
 
         SceneManager.LoadScene("Review intro");
 
+    }
+
+    public void SprintReview2()
+    {
+
+        SceneManager.LoadScene("Sprint Review");
+
+    }
+
+
+    public void finiteReview1()
+    {
+        SceneManager.LoadScene("Sprint Retro");
+
+    }
+
+    public void finiteRetro()
+    {
+        SceneManager.LoadScene("Sprint234");
+
+    }
+    public void onedaypart2()
+    {
+        SceneManager.LoadScene("oneday2");
+
+    }
+
+
+
+    public void finalreview()
+    {
+
+        SceneManager.LoadScene("Sprint Review2");
+    }
+
+    public void finalretro()
+    {
+
+        SceneManager.LoadScene("Sprint Retro2");
     }
 
 

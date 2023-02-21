@@ -33,13 +33,19 @@ public class problem : MonoBehaviour
 
                 break;
             case 2:
-                Console.WriteLine("Tuesday");
+                round++;
+                PlayerPrefs.SetInt("problem", round);
+                SceneManager.LoadScene("Dev1");
                 break;
             case 3:
-                Console.WriteLine("Wednesday");
+                round++;
+                PlayerPrefs.SetInt("problem", round);
+                SceneManager.LoadScene("Design1");
                 break;
             case 4:
-                Console.WriteLine("Wednesday");
+                round=1 ;
+                PlayerPrefs.SetInt("problem", round);
+                SceneManager.LoadScene("Test1");
                 break;
 
         }
@@ -50,10 +56,13 @@ public class problem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        if(round== 0) { 
         round = PlayerPrefs.GetInt("problem")+1;
+                       
+        }
+        round = PlayerPrefs.GetInt("problem");
         teamname = PlayerPrefs.GetString("Teamname");
-        Invoke("openChatbox", 7.0f);
+        Invoke("openChatbox", 4.0f);
 
 
     }

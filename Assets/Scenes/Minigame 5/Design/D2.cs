@@ -66,8 +66,9 @@ public class D2 : MonoBehaviour
 
         if (choiceArray[3] == 1 && choiceArray[5] == 1 )
         {
-
+            
             SceneD2.text = "Pass";
+            SceneManager.LoadScene("Design2");
         }
         else if (choiceArray[5] == 1 )
         {

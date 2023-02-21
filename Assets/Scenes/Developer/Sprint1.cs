@@ -8,7 +8,7 @@ public class Sprint1 : MonoBehaviour
     public GameObject video1, video2;
     public void gotointro()
     {
-        SceneManager.LoadScene("Scrum Intro");
+        SceneManager.LoadScene("1DayPart1");
     }
     // Start is called before the first frame update
     void Start()

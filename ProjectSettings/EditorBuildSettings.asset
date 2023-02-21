@@ -72,6 +72,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Developer/Scrum/Daily Meeting.unity
     guid: ed0a28453406ba84895468d43d639aae
   - enabled: 1
+    path: Assets/Scenes/Developer/Scrum/Sprint234.unity
+    guid: 895b19cace154584ab8caced2a3ec3b8
+  - enabled: 1
     path: Assets/Scenes/Minigame 5/Requirement/Requiement.unity
     guid: 21748e6d0c6542746b503296f592a902
   - enabled: 1
@@ -140,4 +143,52 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minigame 5/Phase/SceneP/Require2.unity
     guid: b89a614d72cf5674699c7dbc03383c19
+  - enabled: 1
+    path: Assets/Scenes/Minigame 5/Phase/SceneP/Dev1.unity
+    guid: 6db461c10850d2d469ad89fb1fafa226
+  - enabled: 1
+    path: Assets/Scenes/Minigame 5/Phase/SceneP/Dev22.unity
+    guid: 3081863d837e1fc4ebd6e71b2b0fbbb1
+  - enabled: 1
+    path: Assets/Scenes/Developer/Scrum/End Sprint.unity
+    guid: 0146b0609f45afe45b90c1df471bfedc
+  - enabled: 1
+    path: Assets/Scenes/Developer/Scrum/Review intro.unity
+    guid: 2a4f4b0896d952c428668690153aff51
+  - enabled: 1
+    path: Assets/Scenes/Developer/Scrum/oneday2.unity
+    guid: 71ff0033d1f55c145b7e91579bef0e12
+  - enabled: 1
+    path: Assets/Scenes/Developer/Scrum/Sprint Retro.unity
+    guid: f0d915aa29b03074e96a7ebfee3096e0
+  - enabled: 1
+    path: Assets/Scenes/Developer/Scrum/Sprint Review.unity
+    guid: e693a5179f4ae0a46aaae6136e86051c
+  - enabled: 1
+    path: Assets/Scenes/Developer/Scrum/FinalSprint.unity
+    guid: 1042c085a93a1e448856bd065ae3b141
+  - enabled: 1
+    path: Assets/Scenes/Developer/Scrum/1DayPart2.unity
+    guid: 8944c1018a1acec42978853e82ae6896
+  - enabled: 1
+    path: Assets/Scenes/Minigame 5/Phase/SceneP/Test1.unity
+    guid: 168c6cb8f1f1cae4287a04d16e12ae4f
+  - enabled: 1
+    path: Assets/Scenes/Minigame 5/Phase/SceneP/Test2.unity
+    guid: a350ec4b6222a14458eb9264e64d661c
+  - enabled: 1
+    path: Assets/Scenes/Minigame 5/Phase/SceneP/Design1.unity
+    guid: 1a030442266bd0847a57d505c25d660d
+  - enabled: 1
+    path: Assets/Scenes/Minigame 5/Phase/SceneP/Design2.unity
+    guid: 3fc9b7369efbd7e4089923343d66ab47
+  - enabled: 1
+    path: Assets/Scenes/Developer/Scrum/Final Sp intro.unity
+    guid: 5b99161431d2d584cab0df95ec85e8e2
+  - enabled: 1
+    path: Assets/Scenes/Developer/Scrum/Sprint Review2.unity
+    guid: 1c10ff0189990644d97132581caa8245
+  - enabled: 1
+    path: Assets/Scenes/Developer/Scrum/Sprint Retro2.unity
+    guid: 0551157c0ef1b314b9e09f2daaca8170
   m_configObjects: {}

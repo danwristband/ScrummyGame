@@ -12,6 +12,47 @@ public class SceneP : MonoBehaviour
         SceneManager.LoadScene("Requiement");
 
     }
+    public void EndRequire()
+    {
+        SceneManager.LoadScene("oneday");
+
+    }
+
+    public void clickDev()
+    {
+        SceneManager.LoadScene("Development");
+
+    }
+    public void EndDev()
+    {
+        SceneManager.LoadScene("End Sprint");
+
+    }
+
+    public void Clickdesign()
+    {
+        SceneManager.LoadScene("Design");
+
+    }
+    public void EndDesign()
+    {
+        SceneManager.LoadScene("oneday2");
+
+    }
+
+    public void ClickTest()
+    {
+        SceneManager.LoadScene("Testing");
+
+    }
+    public void EndTest()
+    {
+        SceneManager.LoadScene("Final Sp intro");
+
+    }
+
+
+
     void Start()
     {
         

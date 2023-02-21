@@ -26,7 +26,7 @@ public class Quest : MonoBehaviour
 
            {
             // Debug.Log(i);
-             Mission[i].SetActive(false);
+             Mission[i].SetActive(false); 
 
             if (i == 0)
             {
