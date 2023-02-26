@@ -49,7 +49,7 @@ public class DevIntro : MonoBehaviour
     }
     public void startM4part2()
     {
-        SceneManager.LoadScene("Minigame 4");
+        SceneManager.LoadScene("premini4");
 
     }
     public void endmini4()

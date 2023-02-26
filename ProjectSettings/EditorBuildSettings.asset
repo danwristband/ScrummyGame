@@ -197,4 +197,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/offer.unity
     guid: 4bbeae0598fd2f749bbf60ab249053a2
+  - enabled: 1
+    path: Assets/Scenes/premini1.unity
+    guid: 9efa91f19eac2b2488c9004d696b4956
+  - enabled: 1
+    path: Assets/Scenes/premini4.unity
+    guid: a5160983fb807f449885a8122e6fb638
+  - enabled: 1
+    path: Assets/Scenes/allrating.unity
+    guid: 58d05fd712fd8c640865929a26f31a95
+  - enabled: 1
+    path: Assets/Scenes/totalscore.unity
+    guid: 91fe35221e74c4f4e9c33c6991e3da10
+  - enabled: 1
+    path: Assets/Scenes/mini4.unity
+    guid: bf1b1c7c2a0991c42bfb3579bc023e6e
   m_configObjects: {}

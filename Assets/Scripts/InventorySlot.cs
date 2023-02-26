@@ -65,9 +65,8 @@ public class InventorySlot : MonoBehaviour,IDropHandler
                 check1 = true;
             }
 
-            Debug.Log("Enter.........."+eventData.pointerEnter);
-            Debug.Log("Drag........" +eventData.pointerDrag);
-            LevelManager.Instance.textSelected(eventData, check1);
+            //Debug.Log("Enter.........."+eventData.pointerEnter);
+            //Debug.Log("Drag........" +eventData.pointerDrag);
 
 
             Debug.Log("end.....................");

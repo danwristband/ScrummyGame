@@ -96,6 +96,20 @@
     <Compile Include="Assets\UI\Minigame 3\play2.cs" />
     <Compile Include="Assets\Offer.cs" />
     <Compile Include="Assets\UI\Minigame 2\play.cs" />
+    <Compile Include="Assets\ScriptsEnd\scrummy.cs" />
+    <Compile Include="Assets\Scripts4\Shape\Shape.cs" />
+    <Compile Include="Assets\Scripts4\CtrlGame4.cs" />
+    <Compile Include="Assets\Scripts4\heart.cs" />
+    <Compile Include="Assets\Scripts4\Game\Grid\Grid.cs" />
+    <Compile Include="Assets\ScriptsEnd\AllRating.cs" />
+    <Compile Include="Assets\Scripts4\InventoryGrid.cs" />
+    <Compile Include="Assets\Scripts4\Shape\ShapeStorage.cs" />
+    <Compile Include="Assets\Scripts4\Shape\Shape_Data.cs" />
+    <Compile Include="Assets\Scripts4\scrum.cs" />
+    <Compile Include="Assets\Scripts4\Game\Grid\GridSquare.cs" />
+    <Compile Include="Assets\Scripts4\DragANDDrop.cs" />
+    <Compile Include="Assets\Scripts4\beforemini4.cs" />
+    <Compile Include="Assets\Scripts4\Shape\Shape_Square.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AurynSky\Gems Ultimate Pack\READ ME.txt" />

@@ -45,7 +45,7 @@ public class Quest : MonoBehaviour
                 i++;
                 savePosition();
                
-                SceneManager.LoadScene("minigame1");
+                SceneManager.LoadScene("premini1");
                 PlayerPrefs.SetInt("MNo", i);
                 Mission[i].SetActive(true);
 

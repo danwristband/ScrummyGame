@@ -9,7 +9,12 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance;
-
+    public Transform[] position;
+    public GameObject[] PkeepM;
+    public GameObject[] PrevPkeepM;
+    public List<GameObject> getRole = new List<GameObject>();
+    public List<int> namePindex = new List<int>();
+    public int tempnumbersCheck;
     public GameObject[] checkP;
     public Transform[] checkPP;
     public GameObject[] checkMMM;
@@ -17,21 +22,20 @@ public class LevelManager : MonoBehaviour
     public GameObject[] checkM;
     public int[] pay = { 52000, 37000, 38000, 25000, 25000, 30000, 51000, 36000, 50000 };
     public int[] exp = { 5, 4, 4, 3, 3, 4, 5, 4, 5 };
-    public GameObject[] keepRole = { null,null,null,null,null,null,null,null,null};
+    public GameObject[] keepRole = {null,null,null,null,null,null,null,null,null};
+    public GameObject[] keepMem = {null,null,null,null,null,null,null,null,null};
     public int countMem = 0;
     public List<int> numbers = new List<int>();
     public List<GameObject> numbersCheck = new List<GameObject>();
     [HideInInspector] public double callog=0;
     [HideInInspector] public float callog2=0;
     [HideInInspector] public double callog3=0;
-    public float budget = 2500000;
-    public float budget2 = 0;
+    public float budget;
+    public float budget2;
     [HideInInspector] public int totalCost = 0;
     [HideInInspector] public float cost = 0;
     [HideInInspector] public float month = 0;
     public double estimateTime = 16;
-
-    public GameObject skip;
 
     public bool check22 = false;
     public bool check33 = false;
@@ -59,18 +63,102 @@ public class LevelManager : MonoBehaviour
     public Text[] selectedtxt;
     public Text[] nametext;
     public string[] nickname= { "Leo","Emma","Jacob","Alan","Grace","Irene","Morgan","Sarah","Oscar"};
+    float getBudget;
+    public GridLayoutGroup[] gridLayoutGroup;
 
 
-    public void skipminigame1()
+    void Start()
     {
-        SceneManager.LoadScene("Score");
+
+        budget = PlayerPrefs.GetFloat("data");
+        getBudget = budget;
+        budgettxt.text = "Budget : " + budget + " Baht";
+        Debug.Log(budget);
+
+        for(int i=0; i<PkeepM.Length; i++)
+        {
+            position[i] = checkM[i].transform.parent;
+        } 
         
+        
+        
+
     }
 
     private void Awake()
     {
-        Instance = this;    }
-    // Start is called before the first frame update
+        Instance = this;   
+    }
+    public void movefirst()
+    {
+
+        for (int i = 0; i < position.Length; i++)
+        {
+            checkM[i].transform.position = position[i].transform.position;
+        }
+
+    }
+    public void shownickname(PointerEventData eventData)
+    {
+        Debug.Log("shownickname");
+
+
+        for (int i = 0; i < checkM.Length; i++)
+        {
+            if (Equals(eventData.pointerDrag, checkM[i]))
+            {
+                PrevPkeepM[i] = PkeepM[i];
+                PkeepM[i] = keepRole[i];
+            } 
+        
+        }
+        
+
+        for (int i = 0; i < keepRole.Length; i++)
+        {
+            for (int j = 0; j < checkP.Length; j++)
+            {
+                if (Equals(keepRole[j], checkP[i]) == true)
+                {
+                    keepMem[i] = checkM[j];
+                    nametext[i].text = nickname[j];
+
+                }
+
+            }
+
+        }
+
+
+
+        for (int i = 0; i < checkM.Length; i++)
+        {
+            if (Equals(eventData.pointerDrag, checkM[i]) == true)
+            {
+                for (int j = 0; j < PrevPkeepM.Length; j++)
+                {
+                    if (Equals(PrevPkeepM[i], PkeepM[i]) == false)
+                    {
+                         if (Equals(PrevPkeepM[i], checkP[j]) == true)
+                                            {
+                                                Debug.Log("checkkkkkkkkkkkkk : " + PrevPkeepM[i] + " | " + j);
+                                                keepMem[j] = null;
+                            nametext[j].text = "";
+                        }
+
+
+                    }
+                   
+
+
+                }
+            }
+
+        }
+
+       
+
+    }
 
     public void score(Transform previousP, Transform currentPP, PointerEventData eventData)
     {
@@ -78,7 +166,6 @@ public class LevelManager : MonoBehaviour
         bool ansM;
         bool ansMMM;
         bool checkName;
-      
         bool checkMember2;
    
 
@@ -90,7 +177,8 @@ public class LevelManager : MonoBehaviour
                 ansMMM = Equals(eventData.pointerEnter, checkMM[i]);
                 if (ansMMM == true)
                 {
-                    
+                    tempnumbersCheck = numbersCheck.Capacity;
+
                 }
             }
         }
@@ -110,7 +198,9 @@ public class LevelManager : MonoBehaviour
                     sumExp += exp[i];
                     countMem++;
                     numbers.Add(exp[i]);
+                    tempnumbersCheck = numbersCheck.Capacity;
                     numbersCheck.Add(eventData.pointerDrag);
+                    getRole.Add(eventData.pointerEnter);
                     score3(eventData);
 
                     for (int j = 0; j < checkM.Length; j++)
@@ -118,7 +208,8 @@ public class LevelManager : MonoBehaviour
                         checkName = Equals(eventData.pointerEnter, checkP[j]);
                       if (checkName == true)
                         {
-                            nametext[j].text = nickname[i];
+                            //nametext[i].text = eventData.pointerDrag.name;
+                           
                         }
                         
                     }
@@ -137,9 +228,12 @@ public class LevelManager : MonoBehaviour
                             sumExp -= exp[j];
                             countMem--;
                             numbers.Remove(exp[j]);
+                            tempnumbersCheck = numbersCheck.Capacity;
+                            getRole.Remove(eventData.pointerEnter);
+
                             numbersCheck.Remove(eventData.pointerDrag);
                             score3(eventData);
-                            nametext[i].text = " ";
+                            //nametext[j].text = " ";
 
                         }
                     }
@@ -157,10 +251,12 @@ public class LevelManager : MonoBehaviour
                     sumExp -= exp[i];
                     countMem--;
                     numbers.Remove(exp[i]);
-     
+                    tempnumbersCheck = numbersCheck.Capacity;
+                    getRole.Remove(eventData.pointerEnter);
+
                     numbersCheck.Remove(eventData.pointerDrag);
                     score3(eventData);
-                   nametext[i].text = " ";
+                   //nametext[i].text = " ";
                 }
             }
 
@@ -179,7 +275,7 @@ public class LevelManager : MonoBehaviour
         {
             totalCost = 0;
             estimateTime = 16;
-            budget2 = 2500000;
+            budget2 = getBudget;
         }
         else
         {
@@ -251,17 +347,74 @@ public class LevelManager : MonoBehaviour
             {
                
                 keepRole[i] = eventData.pointerEnter;
-                
             }
 
             ans1 = Equals(eventData.pointerEnter, checkMMM[i]);
             if (ans1 == true)
             {
                 keepRole[i] = null;
+
             }
 
         }
-        
+        /*
+        for (int i = 0; i < checkM.Length; i++)
+        {
+            if (Equals(eventData.pointerDrag, checkM[i])==true)
+            {
+                PrevPkeepM[i] = PkeepM[i];
+                PkeepM[i] = eventData.pointerEnter;
+            }  
+            
+   
+
+        }
+
+        for (int i = 0; i < keepRole.Length; i++)
+        {
+           for(int j=0; j <checkP.Length; j++)
+            {
+                if (Equals(keepRole[j], checkP[i])==true)
+                {
+                    keepMem[i] = checkM[j];
+                }
+               
+            }
+
+        }
+        for (int i = 0; i < checkM.Length; i++)
+        {
+            if (Equals(eventData.pointerEnter, checkMMM[i]) == true)
+            {
+                PrevPkeepM[i] = checkMMM[i];
+                keepMem[i] = null;
+            }
+        }
+
+
+
+
+            for (int i = 0; i < checkM.Length; i++)
+        {       if (Equals(eventData.pointerDrag, checkM[i]) == true)
+                  {
+                    for (int j = 0; j < PrevPkeepM.Length; j++)
+                    { 
+                  
+                            if (Equals(PrevPkeepM[i], checkP[j]) == true)
+                                {
+                        Debug.Log("checkkkkkkkkkkkkk : " + PrevPkeepM[i] + " | " +j);
+                        
+                    }
+                   
+                   
+
+                }
+            }
+          
+        }
+        */
+       
+
 
         for (int i = 0; i < checkP.Length; i++)
         {
@@ -454,67 +607,7 @@ public class LevelManager : MonoBehaviour
 
     }
 
-    public void textSelected(PointerEventData eventData,bool check)
-    {
-        bool ans1=false;
-        bool ans2=false;
-
-        for (int i = 0; i < checkM.Length; i++)
-        {
-
-
-            ans1 = Equals(eventData.pointerDrag, checkM[i]);
-            if (ans1 == true)
-            {
-                if (check == false)
-                {
-                    selectedtxt[i].text = "";
-                  
-                    Debug.Log("1111notttttttttttttttttttinggggggggg");
-
-                    for (int j = 0; j < checkP.Length; j++)
-                    {
-                        ans2 = Equals(eventData.pointerEnter, checkP[j]);
-                        if (ans2 == true)
-                        {
-                       
-                            Debug.Log("2222notttttttttttttttttttinggggggggg");
-
-                        }
-
-                    }
-                }
-                else if (check == true) //ถูกเลือกแล้ว
-                {
-                    selectedtxt[i].text = "Selected";
-
-                    //ใช้ count mem นะ ที่เป็น list
-                for (int j = 0; j < checkP.Length; j++)
-                {
-                    ans2 = Equals(eventData.pointerEnter, checkP[j]);
-                    if (ans2 == true)
-                    {
-                          //nametext[j].text = nickname[i];
-
-                        }
-                        else
-                        {
-                            //nametext[j].text = " ";
-                        }
-
-
-
-                    }
-
-            }
-
-        }
-
-
-            }
-
-        }
-        
+  
     }
 
 

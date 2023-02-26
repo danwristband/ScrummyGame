@@ -15,6 +15,7 @@ public class Offer : MonoBehaviour
 
         {
             Debug.Log("tag");
+            SceneManager.LoadScene("allrating");
 
 
         }

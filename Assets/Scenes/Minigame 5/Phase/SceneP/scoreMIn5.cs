@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class scoreMIn5 : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class scoreMIn5 : MonoBehaviour
          sum = min5score[0]+ min5score[1]+ min5score[2]+ min5score[3];
         avg = sum / min5score.Length;
         PlayerPrefs.SetInt("scDisplay", avg);
+        PlayerPrefs.SetInt("mini5", avg);
 
     }
 

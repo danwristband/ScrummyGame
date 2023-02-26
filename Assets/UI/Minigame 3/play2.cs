@@ -231,6 +231,7 @@ public class play2 : MonoBehaviour
             scoreText.text = "Score: " + score.ToString() + "Pass";
             SceneManager.LoadScene("FinitePO");
             PlayerPrefs.SetInt("scDisplay", score);
+            PlayerPrefs.SetInt("mini3", score);
             SceneManager.LoadScene("Score");
 
         }
@@ -240,6 +241,7 @@ public class play2 : MonoBehaviour
         {
             scoreText.text = "Score: " + score.ToString() + "Pass";
             PlayerPrefs.SetInt("scDisplay", score);
+            PlayerPrefs.SetInt("mini3", score);
             SceneManager.LoadScene("Score");
         }
         else if (product.transform.position == second.transform.position && payment.transform.position == first.transform.position
@@ -247,6 +249,7 @@ public class play2 : MonoBehaviour
         {
             scoreText.text = "Score: " + score.ToString() + "Pass";
             PlayerPrefs.SetInt("scDisplay", score);
+            PlayerPrefs.SetInt("mini3", score);
             SceneManager.LoadScene("Score");
 
         }
@@ -255,6 +258,7 @@ public class play2 : MonoBehaviour
         {
             scoreText.text = "Score: " + score.ToString() + "Pass";
             PlayerPrefs.SetInt("scDisplay", score);
+            PlayerPrefs.SetInt("mini3", score);
             SceneManager.LoadScene("Score");
         }
         else if (product.transform.position == third.transform.position && payment.transform.position == second.transform.position
@@ -262,6 +266,7 @@ public class play2 : MonoBehaviour
         {
             scoreText.text = "Score: " + score.ToString() + "Pass";
             PlayerPrefs.SetInt("scDisplay", score);
+            PlayerPrefs.SetInt("mini3", score);
             SceneManager.LoadScene("Score");
         }
         else if (product.transform.position == third.transform.position && payment.transform.position == first.transform.position
@@ -269,6 +274,7 @@ public class play2 : MonoBehaviour
         {
             scoreText.text = "Score: " + score.ToString() + "Pass";
             PlayerPrefs.SetInt("scDisplay", score);
+            PlayerPrefs.SetInt("mini3", score);
             SceneManager.LoadScene("Score");
         }
         else

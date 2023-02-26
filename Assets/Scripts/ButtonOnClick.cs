@@ -1,22 +1,30 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-
+using UnityEngine.SceneManagement;
 public class ButtonOnClick : MonoBehaviour
 {
 
 	public Button yourButton;
 	public int score = 5;
-	public Text scoretxt;
 	public Text passtxt;
 	public Text fail1txt;
 	public Text fail2txt;
 	public Text fail3txt;
 	public Text fail4txt;
-	//public Image frame;
-//	bool check5 = false;
+	public Image[] heart;
+	public Image bgfade;
+	public Image scrum;
+	public Button okay;
+	public Button next;
+	public bool chek;
+	public string[] textErr;
+	public bool check22; 
+	public bool check33;
+	public bool checkT; 
+	public bool checkB;
 
 
 
@@ -24,92 +32,156 @@ public class ButtonOnClick : MonoBehaviour
 	{
 		Button btn = yourButton.GetComponent<Button>();
 		btn.onClick.AddListener(TaskOnClick);
+
+		Button btn2 = okay.GetComponent<Button>();
+		btn2.onClick.AddListener(Okay);
+
+		/*Button btn3 = next.GetComponent<Button>();
+		btn3.onClick.AddListener(ClickNext);
+		*/
 		score = 5;
-		//frame.gameObject.SetActive(false);
+
+		for(int i=0; i<heart.Length; i++)
+        {
+		heart[0].gameObject.SetActive(true);
+        }
+		bgfade.gameObject.SetActive(false);
+		scrum.gameObject.SetActive(false);
+		okay.gameObject.SetActive(false);
+		next.gameObject.SetActive(false);
+		int oldValue = PlayerPrefs.GetInt("OldValue");
+
 	}
-  
-    void TaskOnClick()
+	/*void ClickNext()
+	{ //LoadScenc
+		SceneManager.LoadScene("premini4");
+		//send 
+		PlayerPrefs.SetInt("mini1", score);
+		
+
+	}
+	*/
+
+	void Okay()
+    {
+		bgfade.gameObject.SetActive(false);
+		scrum.gameObject.SetActive(false);
+		okay.gameObject.SetActive(false);
+				fail1txt.text = " ";
+				fail2txt.text = " ";
+				fail3txt.text = " ";
+				fail4txt.text = " ";
+		//SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+		//PlayerPrefs.SetInt("OldValue", score);
+		if(check22 == true && check33 == true && checkT == true && checkB == true)
+        {	
+			//send 
+			PlayerPrefs.SetInt("mini1", score);
+            PlayerPrefs.SetInt("scDisplay", score);
+			//LoadScenc
+			SceneManager.LoadScene("Score");
+			
+        }
+	}
+
+
+void TaskOnClick()
 	{
 		Debug.Log("You have clicked the button!");
-		bool check22 = LevelManager.Instance.check22;
-        bool check33 = LevelManager.Instance.check33;
-		bool checkT = LevelManager.Instance.checkTime;
-		bool checkB = LevelManager.Instance.checkBudget;
-
+		 check22 = LevelManager.Instance.check22;
+        check33 = LevelManager.Instance.check33;
+		checkT = LevelManager.Instance.checkTime;
+		checkB = LevelManager.Instance.checkBudget;
+		
 		if (check22 == true && check33 == true && checkT == true && checkB == true )
         {
-            if (score < 0)
+            if (score < 1)
             {
-				score = 0;
+				score = 1;
             }
 			//frame.gameObject.SetActive(true);
-			scoretxt.text = "Score : " + score;
-			passtxt.text = "status : " + " You Pass";
 			fail1txt.text = "";
 			fail2txt.text = "";
 			fail3txt.text = "";
 			fail4txt.text = "";
-
+			bgfade.gameObject.SetActive(true);
+			scrum.gameObject.SetActive(true);
+			//next.gameObject.SetActive(true);
+			passtxt.text = "pass";
+			
+			okay.gameObject.SetActive(true);
+			/*
+			//LoadScenc
+			SceneManager.LoadScene("premini4");
+			//send 
+			PlayerPrefs.SetInt("mini1", score);
+			*/
 
 		}
 		else 
         {
+			bgfade.gameObject.SetActive(true);
+			scrum.gameObject.SetActive(true);
+			okay.gameObject.SetActive(true);
+			//LevelManager.Instance.movefirst();
 			score--;
-		
-			if (score < 0)
+			
+			
+			
+			if (score < 1)
 			{
-				score = 0;
+				score = 1;
 			}
-			scoretxt.text = "Score : " + score;
-			//frame.gameObject.SetActive(true);
+			heart[score].gameObject.SetActive(false);
 			passtxt.text = "";
 
 			if (check22 == false)
 			{
-				fail1txt.text = "Your Team doesn't match";
+				fail1txt.text += "ทีมของคุณยังมีตำแหน่งไม่ครบ\n";
 
-            }
+			}
             else
             {
-				fail1txt.text = "";
+				fail1txt.text += "";
 
 			}
 
 			if (check33 == false)
 			{
-				fail2txt.text = "role and skill doesn't match";
+				fail1txt.text += "การจับคู่ระหว่างบทบาทและสกิลยังไม่ถูกต้อง\n";
 
 
-            }
-            else
+			}
+			else
             {
-				fail2txt.text = "";
+				fail1txt.text += "";
 
 
 			}
 
 			if (checkT == false)
 			{
-				fail3txt.text = "Over Delivery Time";
+				fail1txt.text += "เวลาส่งมอบยังเกินกำหนด\n";
 
             }
             else
             {
-				fail3txt.text = "";
+				fail1txt.text += "";
 			}
 
 			if (checkB == false)
 			{
-				fail4txt.text = "Over Budget";
-            }
-            else
-            {
-				fail4txt.text = "";
+				fail1txt.text += "\nใช้งบประมาณเกินกำหนด";
 
 			}
+            else
+            {
+				fail1txt.text += "";
+
+			}
+			
 
 
-		
 		}
 
 	}

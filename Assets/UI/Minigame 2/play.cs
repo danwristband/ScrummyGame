@@ -130,6 +130,7 @@ public class play : MonoBehaviour
             Debug.Log("Pass");
             Debug.Log(score);
             PlayerPrefs.SetInt("scDisplay", score);
+            PlayerPrefs.SetInt("mini2", score);
             SceneManager.LoadScene("Score");
         }
 
