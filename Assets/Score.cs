@@ -35,9 +35,9 @@ public class Score : MonoBehaviour
         {
             SceneManager.LoadScene("End Minigame4");
         }
-        else if (MinigameNumber == 6)
+        else if (MinigameNumber == 0)
         {
-            SceneManager.LoadScene("Office");
+            SceneManager.LoadScene("Final Sp intro");
             
 
         }

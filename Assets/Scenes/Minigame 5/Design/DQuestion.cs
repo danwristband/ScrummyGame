@@ -7,6 +7,7 @@ public class DQuestion : MonoBehaviour
 {
     public GameObject choice1, choice2, choice3, choice4;
     public GameObject CorrectChoice;
+    public int scoremin5 = 5;
 
 
 
@@ -15,8 +16,12 @@ public class DQuestion : MonoBehaviour
     {
         if (CorrectChoice == choice1)
         {
+            if (scoremin5 <= 1)
+            {
+                scoremin5 = 1;
+            }
             Debug.Log("Pass");
-
+            PlayerPrefs.SetInt("min5Design", scoremin5);
             SceneManager.LoadScene("D2");
 
 
@@ -24,6 +29,7 @@ public class DQuestion : MonoBehaviour
         }
         else
         {
+            scoremin5--;
             Debug.Log("-1");
         }
 
@@ -32,12 +38,18 @@ public class DQuestion : MonoBehaviour
     {
         if (CorrectChoice == choice2)
         {
+            if (scoremin5 <= 1)
+            {
+                scoremin5 = 1;
+            }
             Debug.Log("Pass");
+            PlayerPrefs.SetInt("min5Design", scoremin5);
             SceneManager.LoadScene("D2");
 
         }
         else
         {
+            scoremin5--;
             Debug.Log("-1");
         }
 
@@ -46,12 +58,18 @@ public class DQuestion : MonoBehaviour
     {
         if (CorrectChoice == choice3)
         {
+            if (scoremin5 <= 1)
+            {
+                scoremin5 = 1;
+            }
             Debug.Log("Pass");
+            PlayerPrefs.SetInt("min5Design", scoremin5);
             SceneManager.LoadScene("D2");
 
         }
         else
         {
+            scoremin5--;
             Debug.Log("-1");
         }
 
@@ -60,12 +78,18 @@ public class DQuestion : MonoBehaviour
     {
         if (CorrectChoice == choice4)
         {
+            if (scoremin5 <= 1)
+            {
+                scoremin5 = 1;
+            }
             Debug.Log("Pass");
+            PlayerPrefs.SetInt("min5Design", scoremin5);
             SceneManager.LoadScene("D2");
 
         }
         else
         {
+            scoremin5--;
             Debug.Log("-1");
         }
 

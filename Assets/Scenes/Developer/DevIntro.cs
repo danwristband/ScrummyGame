@@ -128,6 +128,24 @@ public class DevIntro : MonoBehaviour
         SceneManager.LoadScene("Sprint Retro2");
     }
 
+    public void offer()
+    {
+
+        SceneManager.LoadScene("offer");
+    }
+
+    public void beforeoffer()
+    {
+
+        SceneManager.LoadScene("before offer");
+    }
+
+    public void allrating()
+    {
+
+        SceneManager.LoadScene("allrating");
+    }
+
 
     void Start()
     {

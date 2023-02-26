@@ -191,4 +191,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Developer/Scrum/Sprint Retro2.unity
     guid: 0551157c0ef1b314b9e09f2daaca8170
+  - enabled: 1
+    path: Assets/Scenes/Developer/Scrum/before offer.unity
+    guid: 6e43f210a7c8e4f458dd86a7edba8ce4
+  - enabled: 1
+    path: Assets/Scenes/offer.unity
+    guid: 4bbeae0598fd2f749bbf60ab249053a2
   m_configObjects: {}

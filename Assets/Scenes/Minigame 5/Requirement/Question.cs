@@ -9,16 +9,21 @@ public class Question : MonoBehaviour
 
     public GameObject choice1,choice2,choice3,choice4 ;
     public GameObject CorrectChoice;
-   
+    public int scoremin5 = 5;
 
 
-    
+
+
     public void choicecheck1()
     {
         if(CorrectChoice == choice1)
-        {   
+        {
+            if (scoremin5 <= 1)
+            {
+                scoremin5 = 1;
+            }
             Debug.Log("Pass");
-            
+            PlayerPrefs.SetInt("min5require", scoremin5);
             SceneManager.LoadScene("R2");
            
 
@@ -26,6 +31,7 @@ public class Question : MonoBehaviour
         }
         else
         {
+            scoremin5--;
             Debug.Log("-1");
         }
        
@@ -34,12 +40,18 @@ public class Question : MonoBehaviour
     {
         if (CorrectChoice == choice2)
         {
+            if (scoremin5 <= 1)
+            {
+                scoremin5 = 1;
+            }
             Debug.Log("Pass");
+            PlayerPrefs.SetInt("min5require", scoremin5);
             SceneManager.LoadScene("R2");
            
         }
         else
         {
+            scoremin5--;
             Debug.Log("-1");
         }
 
@@ -48,12 +60,18 @@ public class Question : MonoBehaviour
     {
         if (CorrectChoice == choice3)
         {
+            if (scoremin5 <= 1)
+            {
+                scoremin5 = 1;
+            }
             Debug.Log("Pass");
+            PlayerPrefs.SetInt("min5require", scoremin5);
             SceneManager.LoadScene("R2");
             
         }
         else
         {
+            scoremin5--;
             Debug.Log("-1");
         }
 
@@ -62,12 +80,18 @@ public class Question : MonoBehaviour
     {
         if (CorrectChoice == choice4)
         {
-            Debug.Log("Pass");
+            if (scoremin5 <= 1)
+            {
+                scoremin5 = 1;
+            }
+            Debug.Log("Pass"); 
+            PlayerPrefs.SetInt("min5require", scoremin5);
             SceneManager.LoadScene("R2");
            
         }
         else
         {
+            scoremin5--;
             Debug.Log("-1");
         }
 

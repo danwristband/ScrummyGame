@@ -245,7 +245,6 @@ MonoBehaviour:
   product: {fileID: 1894022142}
   registeration: {fileID: 1229643642}
   userProfile: {fileID: 672652806}
-  ChoiceinitPos1: {x: 0, y: 0}
   initttPos:
   - {x: -355.2337, y: 0.0025024}
   - {x: -355.2337, y: -115}
@@ -259,6 +258,12 @@ MonoBehaviour:
   productInitPos: {x: 0, y: 0}
   regisInitPos: {x: 0, y: 0}
   profileInitPos: {x: 0, y: 0}
+  yaccount: 0
+  ychat: 0
+  ypayment: 0
+  yproduct: 0
+  yregis: 0
+  yprofile: 0
   score: 5
   scoreText: {fileID: 824212924}
 --- !u!4 &301607480
@@ -1666,6 +1671,18 @@ MonoBehaviour:
       - m_Target: {fileID: 301607479}
         m_TargetAssemblyTypeName: play2, Assembly-CSharp
         m_MethodName: checkPoint
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 301607479}
+        m_TargetAssemblyTypeName: play2, Assembly-CSharp
+        m_MethodName: orderChoice
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

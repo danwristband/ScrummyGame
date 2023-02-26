@@ -47,7 +47,7 @@ public class SceneP : MonoBehaviour
     }
     public void EndTest()
     {
-        SceneManager.LoadScene("Final Sp intro");
+        SceneManager.LoadScene("Score");
 
     }
 

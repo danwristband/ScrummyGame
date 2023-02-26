@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,12 +13,214 @@ public class play2 : MonoBehaviour
 
     public Vector2[] initttPos = new Vector2[6]; //accountInitPos, chatInitPos, paymentInitPos, productInitPos, regisInitPos, profileInitPos;
     public Vector2 accountInitPos, chatInitPos, paymentInitPos, productInitPos, regisInitPos, profileInitPos;
+    public double yaccount, ychat, ypayment, yproduct, yregis, yprofile;
 
     public int score = 5;
     public Text scoreText;
 
+    public void orderaccount(double yaxis)
+    {
+        if(yaxis == 781)
+        {
+            PlayerPrefs.SetInt("orderaccount", 1);
+            Debug.Log("account"+1);
+        }
+        else if (yaxis == 664)
+        {
+            PlayerPrefs.SetInt("orderaccount", 2);
+            Debug.Log("account" + 2);
+        }
+        else if (yaxis >= 540 || yaxis <= 541)
+        {
+            PlayerPrefs.SetInt("orderaccount", 3);
+            Debug.Log("account" + 3);
 
+        }
+        else if (yaxis == 425)
+        {
+            PlayerPrefs.SetInt("orderaccount", 4);
+            Debug.Log("account" + 4);
+        }
+        else if (yaxis == 310)
+        {
+            PlayerPrefs.SetInt("orderaccount", 5);
+            Debug.Log("account" + 5);
+        }
+        else if (yaxis == 194)
+        {
+            PlayerPrefs.SetInt("orderaccount", 6);
+            Debug.Log("account" + 6);
+        }
+    }
 
+    public void orderpayment(double yaxis)
+    {
+        if (yaxis == 781)
+        {
+            PlayerPrefs.SetInt("orderpayment", 1);
+            Debug.Log("payment" + 1);
+        }
+        else if (yaxis == 664)
+        {
+            PlayerPrefs.SetInt("orderpayment", 2);
+            Debug.Log("payment" + 2);
+        }
+        else if (yaxis >= 540 || yaxis <= 541)
+        {
+            PlayerPrefs.SetInt("orderpayment", 3);
+            Debug.Log("payment" + 3);
+        }
+        else if (yaxis == 425)
+        {
+            PlayerPrefs.SetInt("orderpayment", 4);
+            Debug.Log("payment" + 4);
+        }
+        else if (yaxis == 310)
+        {
+            PlayerPrefs.SetInt("orderpayment", 5);
+            Debug.Log("payment" + 5);
+        }
+        else if (yaxis == 194)
+        {
+            PlayerPrefs.SetInt("orderpayment", 6);
+            Debug.Log("payment" + 6);
+        }
+    }
+    public void orderprofile(double yaxis)
+    {
+        if (yaxis == 781)
+        {
+            PlayerPrefs.SetInt("orderprofile", 1);
+            Debug.Log("profile" + 1);
+        }
+        else if (yaxis == 664)
+        {
+            PlayerPrefs.SetInt("orderprofile", 2);
+            Debug.Log("profile" + 2);
+        }
+        else if (yaxis >= 540 || yaxis <= 541)
+        {
+            PlayerPrefs.SetInt("orderprofile", 3);
+            Debug.Log("profile" + 3);
+        }
+        else if (yaxis == 425)
+        {
+            PlayerPrefs.SetInt("orderprofile", 4);
+            Debug.Log("profile" + 4);
+        }
+        else if (yaxis == 310)
+        {
+            PlayerPrefs.SetInt("orderprofile", 5);
+            Debug.Log("profile" + 5);
+        }
+        else if (yaxis == 194)
+        {
+            PlayerPrefs.SetInt("orderprofile", 6);
+            Debug.Log("profile" + 6);
+        }
+    }
+
+    public void orderchat(double yaxis)
+    {
+        if (yaxis == 781)
+        {
+            PlayerPrefs.SetInt("orderchat", 1);
+        }
+        else if (yaxis == 664)
+        {
+            PlayerPrefs.SetInt("orderchat", 2);
+        }
+        else if (yaxis >= 540 || yaxis <= 541)
+        {
+            PlayerPrefs.SetInt("orderchat", 3);
+        }
+        else if (yaxis == 425)
+        {
+            PlayerPrefs.SetInt("orderchat", 4);
+        }
+        else if (yaxis == 310)
+        {
+            PlayerPrefs.SetInt("orderchat", 5);
+        }
+        else if (yaxis == 194)
+        {
+            PlayerPrefs.SetInt("orderchat", 6);
+        }
+    }
+
+    public void orderregis(double yaxis)
+    {
+        if (yaxis == 781)
+        {
+            PlayerPrefs.SetInt("orderregis", 1);
+        }
+        else if (yaxis == 664)
+        {
+            PlayerPrefs.SetInt("orderregis", 2);
+        }
+        else if (yaxis >= 540 || yaxis <= 541)
+        {
+            PlayerPrefs.SetInt("orderregis", 3);
+        }
+        else if (yaxis == 425)
+        {
+            PlayerPrefs.SetInt("orderregis", 4);
+        }
+        else if (yaxis == 310)
+        {
+            PlayerPrefs.SetInt("orderregis", 5);
+        }
+        else if (yaxis == 194)
+        {
+            PlayerPrefs.SetInt("orderregis", 6);
+        }
+    }
+
+    public void orderproduct(double yaxis)
+    {
+        if (yaxis == 781)
+        {
+            PlayerPrefs.SetInt("orderproduct", 1);
+        }
+        else if (yaxis == 664)
+        {
+            PlayerPrefs.SetInt("orderproduct", 2);
+        }
+        else if (yaxis >= 540 || yaxis <= 541)
+        {
+            PlayerPrefs.SetInt("orderproduct", 3);
+        }
+        else if (yaxis == 425)
+        {
+            PlayerPrefs.SetInt("orderproduct", 4);
+        }
+        else if (yaxis == 310)
+        {
+            PlayerPrefs.SetInt("orderproduct", 5);
+        }
+        else if (yaxis == 194)
+        {
+            PlayerPrefs.SetInt("orderproduct", 6);
+        }
+    }
+    public void orderChoice()
+    {
+        yaccount = accountInitPos.y;
+        ychat = chatInitPos.y;
+        ypayment = paymentInitPos.y;
+        yproduct = productInitPos.y;
+        yregis = regisInitPos.y;
+        yprofile = profileInitPos.y;
+
+        orderaccount(yaccount);
+        orderchat(ychat);
+        orderpayment(ypayment);
+        orderproduct(yproduct);
+        orderprofile(yprofile);
+        orderregis(yregis);
+
+        
+    }
 
     public void checkPoint()
     {

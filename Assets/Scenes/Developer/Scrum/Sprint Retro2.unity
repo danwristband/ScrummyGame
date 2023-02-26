@@ -748,7 +748,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 267098790}
           m_TargetAssemblyTypeName: DevIntro, Assembly-CSharp
-          m_MethodName: finiteRetro
+          m_MethodName: beforeoffer
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

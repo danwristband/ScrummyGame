@@ -8,6 +8,7 @@ public class TQuestion : MonoBehaviour
 
     public GameObject choice1, choice2, choice3, choice4;
     public GameObject CorrectChoice;
+    public int scoremin5 = 5;
 
 
 
@@ -17,7 +18,10 @@ public class TQuestion : MonoBehaviour
         if (CorrectChoice == choice1)
         {
             Debug.Log("Pass");
-
+            if (scoremin5 <= 1) {
+                scoremin5 = 1;
+            }
+            PlayerPrefs.SetInt("min5test", scoremin5);
             SceneManager.LoadScene("T2");
 
 
@@ -25,6 +29,7 @@ public class TQuestion : MonoBehaviour
         }
         else
         {
+            scoremin5--;
             Debug.Log("-1");
         }
 
@@ -33,12 +38,18 @@ public class TQuestion : MonoBehaviour
     {
         if (CorrectChoice == choice2)
         {
+            if (scoremin5 <= 1)
+            {
+                scoremin5 = 1;
+            }
             Debug.Log("Pass");
+            PlayerPrefs.SetInt("min5test", scoremin5);
             SceneManager.LoadScene("T2");
 
         }
         else
         {
+            scoremin5--;
             Debug.Log("-1");
         }
 
@@ -47,12 +58,18 @@ public class TQuestion : MonoBehaviour
     {
         if (CorrectChoice == choice3)
         {
+            if (scoremin5 <= 1)
+            {
+                scoremin5 = 1;
+            }
             Debug.Log("Pass");
+            PlayerPrefs.SetInt("min5test", scoremin5);
             SceneManager.LoadScene("T2");
 
         }
         else
         {
+            scoremin5--;
             Debug.Log("-1");
         }
 
@@ -61,12 +78,18 @@ public class TQuestion : MonoBehaviour
     {
         if (CorrectChoice == choice4)
         {
+            if (scoremin5 <= 1)
+            {
+                scoremin5 = 1;
+            }
             Debug.Log("Pass");
+            PlayerPrefs.SetInt("min5test", scoremin5);
             SceneManager.LoadScene("T2");
 
         }
         else
         {
+            scoremin5--;
             Debug.Log("-1");
         }
 
