@@ -152,7 +152,21 @@ public class DevIntro : MonoBehaviour
         teamname = PlayerPrefs.GetString("Teamname");
         Invoke("openChatbox", 1.0f);
 
+        int orderprofile = PlayerPrefs.GetInt("orderprofile");
+        int orderchat = PlayerPrefs.GetInt("orderchat");
+        int orderregis = PlayerPrefs.GetInt("orderregis");
+        int orderproduct = PlayerPrefs.GetInt("orderproduct");
+        int orderpayment = PlayerPrefs.GetInt("orderpayment");
+        int orderaccount = PlayerPrefs.GetInt("orderaccount");
 
+
+        Debug.Log(orderprofile);
+        Debug.Log(orderchat);
+        Debug.Log(orderregis);
+        Debug.Log(orderproduct);
+        Debug.Log(orderpayment);
+        Debug.Log(orderaccount);
+        
        
 
 

@@ -30,7 +30,7 @@ public class play2 : MonoBehaviour
             PlayerPrefs.SetInt("orderaccount", 2);
             Debug.Log("account" + 2);
         }
-        else if (yaxis >= 540 || yaxis <= 541)
+        else if (yaxis >= 540 && yaxis <= 541)
         {
             PlayerPrefs.SetInt("orderaccount", 3);
             Debug.Log("account" + 3);
@@ -65,7 +65,7 @@ public class play2 : MonoBehaviour
             PlayerPrefs.SetInt("orderpayment", 2);
             Debug.Log("payment" + 2);
         }
-        else if (yaxis >= 540 || yaxis <= 541)
+        else if (yaxis >= 540 && yaxis <= 541)
         {
             PlayerPrefs.SetInt("orderpayment", 3);
             Debug.Log("payment" + 3);
@@ -98,7 +98,7 @@ public class play2 : MonoBehaviour
             PlayerPrefs.SetInt("orderprofile", 2);
             Debug.Log("profile" + 2);
         }
-        else if (yaxis >= 540 || yaxis <= 541)
+        else if (yaxis >= 540 && yaxis <= 541)
         {
             PlayerPrefs.SetInt("orderprofile", 3);
             Debug.Log("profile" + 3);
@@ -125,26 +125,32 @@ public class play2 : MonoBehaviour
         if (yaxis == 781)
         {
             PlayerPrefs.SetInt("orderchat", 1);
+            Debug.Log("chat" + 1);
         }
         else if (yaxis == 664)
         {
             PlayerPrefs.SetInt("orderchat", 2);
+            Debug.Log("chat" + 2);
         }
-        else if (yaxis >= 540 || yaxis <= 541)
+        else if (yaxis >= 540 && yaxis <= 541)
         {
             PlayerPrefs.SetInt("orderchat", 3);
+            Debug.Log("chat" + 3);
         }
         else if (yaxis == 425)
         {
             PlayerPrefs.SetInt("orderchat", 4);
+            Debug.Log("chat" + 4);
         }
         else if (yaxis == 310)
         {
             PlayerPrefs.SetInt("orderchat", 5);
+            Debug.Log("chat" + 5);
         }
         else if (yaxis == 194)
         {
             PlayerPrefs.SetInt("orderchat", 6);
+            Debug.Log("chat" + 6);
         }
     }
 
@@ -158,7 +164,7 @@ public class play2 : MonoBehaviour
         {
             PlayerPrefs.SetInt("orderregis", 2);
         }
-        else if (yaxis >= 540 || yaxis <= 541)
+        else if (yaxis >= 540 && yaxis <= 541)
         {
             PlayerPrefs.SetInt("orderregis", 3);
         }
@@ -186,7 +192,7 @@ public class play2 : MonoBehaviour
         {
             PlayerPrefs.SetInt("orderproduct", 2);
         }
-        else if (yaxis >= 540 || yaxis <= 541)
+        else if (yaxis >= 540 && yaxis <= 541)
         {
             PlayerPrefs.SetInt("orderproduct", 3);
         }
