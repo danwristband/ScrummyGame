@@ -14,7 +14,7 @@ public class play2 : MonoBehaviour
     public Vector2[] initttPos = new Vector2[6]; //accountInitPos, chatInitPos, paymentInitPos, productInitPos, regisInitPos, profileInitPos;
     public Vector2 accountInitPos, chatInitPos, paymentInitPos, productInitPos, regisInitPos, profileInitPos;
     public double yaccount, ychat, ypayment, yproduct, yregis, yprofile;
-
+    public GameObject miniheart1, miniheart2, miniheart3, miniheart4 ,miniheart5;
     public int score = 5;
     public Text scoreText;
 
@@ -230,6 +230,9 @@ public class play2 : MonoBehaviour
 
     public void checkPoint()
     {
+        
+
+
         if (score <= 1)
         {
             score = 1;
@@ -303,7 +306,23 @@ public class play2 : MonoBehaviour
 
         }
 
-       
+        if (score == 4)
+        {
+            miniheart5.SetActive(false);
+        }
+        else if (score == 3)
+        {
+            miniheart4.SetActive(false);
+        }
+        else if (score == 2)
+        {
+            miniheart3.SetActive(false);
+        }
+        else if (score == 1)
+        {
+            miniheart2.SetActive(false);
+        }
+
 
     }
 

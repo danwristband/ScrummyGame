@@ -11,8 +11,8 @@ public class play : MonoBehaviour
      public GameObject Painpoint,Personal,Solution,Value,Confirm;
      public GameObject  Choice1, Choice2, Choice3, Choice4;
      public GameObject Requirement, Game;
-
-     public int score = 5;
+     public GameObject miniheart1, miniheart2, miniheart3, miniheart4, miniheart5;
+        public int score = 5;
      public Text scoreText;
      public Text pass;
 
@@ -123,9 +123,12 @@ public class play : MonoBehaviour
     }
     public void Scorecal()
     {
+       
+
         if (Choice1.transform.position == Solution.transform.position && Choice2.transform.position == Personal.transform.position
             && Choice3.transform.position == Painpoint.transform.position && Choice4.transform.position == Value.transform.position)
         {
+           
             pass.text = "Pass" ;
             Debug.Log("Pass");
             Debug.Log(score);
@@ -164,6 +167,23 @@ public class play : MonoBehaviour
             if (score <=1)
             {
                 score = 1;
+            }
+
+            if (score == 4)
+            {
+                miniheart5.SetActive(false);
+            }
+            else if (score == 3)
+            {
+                miniheart4.SetActive(false);
+            }
+            else if (score == 2)
+            {
+                miniheart3.SetActive(false);
+            }
+            else if (score == 1)
+            {
+                miniheart2.SetActive(false);
             }
 
             Debug.Log("Fail");
