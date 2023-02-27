@@ -49,6 +49,9 @@ public class ButtonOnClick : MonoBehaviour
 		scrum.gameObject.SetActive(false);
 		okay.gameObject.SetActive(false);
 		next.gameObject.SetActive(false);
+		passtxt.gameObject.SetActive(false);
+		fail1txt.gameObject.SetActive(false);
+
 		int oldValue = PlayerPrefs.GetInt("OldValue");
 
 	}
@@ -67,10 +70,9 @@ public class ButtonOnClick : MonoBehaviour
 		bgfade.gameObject.SetActive(false);
 		scrum.gameObject.SetActive(false);
 		okay.gameObject.SetActive(false);
-				fail1txt.text = " ";
-				fail2txt.text = " ";
-				fail3txt.text = " ";
-				fail4txt.text = " ";
+		fail1txt.gameObject.SetActive(false);
+		fail1txt.text = "";
+
 		//SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		//PlayerPrefs.SetInt("OldValue", score);
 		if(check22 == true && check33 == true && checkT == true && checkB == true)
@@ -101,11 +103,11 @@ void TaskOnClick()
             }
 			//frame.gameObject.SetActive(true);
 			fail1txt.text = "";
-			fail2txt.text = "";
-			fail3txt.text = "";
-			fail4txt.text = "";
+			
 			bgfade.gameObject.SetActive(true);
 			scrum.gameObject.SetActive(true);
+			passtxt.gameObject.SetActive(true);
+			fail1txt.gameObject.SetActive(false);
 			//next.gameObject.SetActive(true);
 			passtxt.text = "pass";
 			
@@ -123,6 +125,9 @@ void TaskOnClick()
 			bgfade.gameObject.SetActive(true);
 			scrum.gameObject.SetActive(true);
 			okay.gameObject.SetActive(true);
+			fail1txt.gameObject.SetActive(true);
+
+			passtxt.gameObject.SetActive(false);
 			//LevelManager.Instance.movefirst();
 			score--;
 			
@@ -134,6 +139,8 @@ void TaskOnClick()
 			}
 			heart[score].gameObject.SetActive(false);
 			passtxt.text = "";
+
+
 
 			if (check22 == false)
 			{
@@ -171,7 +178,7 @@ void TaskOnClick()
 
 			if (checkB == false)
 			{
-				fail1txt.text += "\nใช้งบประมาณเกินกำหนด";
+				fail1txt.text += "ใช้งบประมาณเกินกำหนด";
 
 			}
             else

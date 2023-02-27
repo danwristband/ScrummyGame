@@ -8,8 +8,8 @@ using UnityEngine.SceneManagement;
 
 public class Score : MonoBehaviour
 {
-    public Text teamnameText ;
-    public string teamname;
+    //public Text teamnameText ;
+   // public string teamname;
     public GameObject Excellent,Good,Fair,Poor,Bad ;
     public int scoredisplay , MinigameNumber;
     public GameObject confirm;
@@ -47,38 +47,38 @@ public class Score : MonoBehaviour
     public void excellentFn()
     {
         Excellent.SetActive(true);
-        teamnameText.text = teamname;
+       // teamnameText.text = teamname;
         
     }
     public void goodFn()
     {
         Good.SetActive(true);
-        teamnameText.text = teamname;
+        //teamnameText.text = teamname;
         confirm.SetActive(true);
     }
     public void fairFn()
     {
         Fair.SetActive(true);
-        teamnameText.text = teamname;
+        //teamnameText.text = teamname;
         confirm.SetActive(true);
     }
     public void poorFn()
     {
         Poor.SetActive(true);
-        teamnameText.text = teamname;
+        //teamnameText.text = teamname;
         confirm.SetActive(true);
     }
     public void badFn()
     {
         Bad.SetActive(true);
-        teamnameText.text = teamname;
+        //teamnameText.text = teamname;
         confirm.SetActive(true);
     }
     // Start is called before the first frame update
 
     void Start()
     {
-        teamname = PlayerPrefs.GetString("Teamname");
+        //teamname = PlayerPrefs.GetString("Teamname");
         scoredisplay = PlayerPrefs.GetInt("scDisplay");
         MinigameNumber = PlayerPrefs.GetInt("MNo");
         //Invoke("badFn", 5.0f);
