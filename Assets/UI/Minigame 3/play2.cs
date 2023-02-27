@@ -230,15 +230,22 @@ public class play2 : MonoBehaviour
 
     public void checkPoint()
     {
+        if (score <= 1)
+        {
+            score = 1;
+        }
 
         if (product.transform.position == first.transform.position || payment.transform.position == second.transform.position
             && userProfile.transform.position == third.transform.position)
         {
             scoreText.text = "Score: " + score.ToString() + "Pass";
             SceneManager.LoadScene("FinitePO");
+           
             PlayerPrefs.SetInt("scDisplay", score);
             PlayerPrefs.SetInt("mini3", score);
             SceneManager.LoadScene("Score");
+            
+            
 
         }
 
