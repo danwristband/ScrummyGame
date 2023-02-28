@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/office.unity
-=======
-- path: Assets/Scenes/premini1.unity
->>>>>>> origin/aew
+- path: Assets/Scenes/totalscore.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

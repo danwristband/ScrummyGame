@@ -9,6 +9,14 @@ public class scrummy : MonoBehaviour
     public int scoreall;
 
     public Button next;
+
+
+    public void newgame()
+    {
+
+        SceneManager.LoadScene("GameStarts");
+    }
+
     void Start()
     {
         scoreall = PlayerPrefs.GetInt("player_score");
