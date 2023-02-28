@@ -69,17 +69,48 @@ public class CtrlGame4 : MonoBehaviour
     public Button okay;
     public bool chek;
     public Image[] heart;
+    public int[] arrtempPri = { 0, 0, 0, 0, 0, 0 };
+    public int[] indexArrPP = { 1, 2, 3, 4, 5, 6 };
+    public void sortGetNewPriority()
+    {
+        int n = arrtempPri.Length, i, j, tmp, tmp2;
+        for (i = 0; i < n; i++)
+        {
+            for (j = i + 1; j < n; j++)
+            {
+                if (arrtempPri[j] < arrtempPri[i])
+                {
+                    tmp = arrtempPri[i];
+                    arrtempPri[i] = arrtempPri[j];
+                    arrtempPri[j] = tmp;
+
+                    tmp2 = indexArrPP[i];
+                    indexArrPP[i] = indexArrPP[j];
+                    indexArrPP[j] = tmp2;
+                }
+
+            }
+        }
 
 
+
+    }
     void Start()
     {
+        
+        arrtempPri[0]= PlayerPrefs.GetInt("orderchat");
+        arrtempPri[1]= PlayerPrefs.GetInt("orderpayment");
+        arrtempPri[2]= PlayerPrefs.GetInt("orderproduct");
+        arrtempPri[3]= PlayerPrefs.GetInt("orderaccount");
+        arrtempPri[4]= PlayerPrefs.GetInt("orderregis");
+        arrtempPri[5]= PlayerPrefs.GetInt("orderprofile");
 
-        getNumberItemPriority[0]= PlayerPrefs.GetInt("orderchat");
-        getNumberItemPriority[1]= PlayerPrefs.GetInt("orderpayment");
-        getNumberItemPriority[2]= PlayerPrefs.GetInt("orderproduct");
-        getNumberItemPriority[3]= PlayerPrefs.GetInt("orderaccount");
-        getNumberItemPriority[4]= PlayerPrefs.GetInt("orderregis");
-        getNumberItemPriority[5]= PlayerPrefs.GetInt("orderprofile");
+        sortGetNewPriority();
+
+        for(int i=0; i<arrtempPri.Length; i++)
+        {
+            getNumberItemPriority[i] = indexArrPP[i];
+        }
 
         Button btn = yourButton.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
@@ -88,6 +119,7 @@ public class CtrlGame4 : MonoBehaviour
         countItem = 0;
         indexArr = new int[12];
         indexArrP = new int[6] {1,2,3,4,5,6};
+
         int[] indexArrTemp = new int[6];
         Arr2D = new GameObject[colunm, row];
         Arr2DGetGridAll = new string[colunm, row];
@@ -96,11 +128,15 @@ public class CtrlGame4 : MonoBehaviour
         {
             indexArrTemp[j] = getNumberItemPriority[j];
         }
+
         sortGetPriority();
+
+
         for (int j = 0; j < indexArrTemp.Length; j++)
         {
             getNumberItemPriority[j]=indexArrTemp[j]  ;
         }
+
         int p = 0;
 
 
@@ -120,6 +156,8 @@ public class CtrlGame4 : MonoBehaviour
 
             priorityText[e].text = " " + indexArrP[e];
             }
+
+
     pic1=new string[9];
     pic11 = new string[4]; 
     pic2  = new string[7];

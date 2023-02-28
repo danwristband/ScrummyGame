@@ -64,7 +64,7 @@ public class beforemini4 : MonoBehaviour
         showtext.text = " ";
         if (chek == true)
         {
-SceneManager.LoadScene("mini4");
+SceneManager.LoadScene("Howto 4");
         }
         
     }
