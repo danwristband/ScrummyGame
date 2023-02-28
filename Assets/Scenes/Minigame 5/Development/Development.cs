@@ -17,7 +17,11 @@ public class Development : MonoBehaviour
     public Text chooseText;
     public Text SceneR2;
 
-
+    public GameObject close;
+    public void closeScrum()
+    {
+        close.SetActive(false);
+    }
 
     public void onClickchoice1()
     {

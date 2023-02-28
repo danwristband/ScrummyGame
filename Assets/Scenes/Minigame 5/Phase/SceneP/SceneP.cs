@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneP : MonoBehaviour
 {
-    public GameObject click;
+    public GameObject click, next;
+    
 
     public void clickRequire()
     {
@@ -51,11 +52,15 @@ public class SceneP : MonoBehaviour
 
     }
 
+    public void nextskip()
+    {
+        next.SetActive(true);
 
+    }
 
     void Start()
     {
-        
+        Invoke("nextskip", 4f);
     }
 
     // Update is called once per frame

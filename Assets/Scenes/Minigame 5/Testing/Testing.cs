@@ -18,7 +18,11 @@ public class Testing : MonoBehaviour
     public Text SceneR2;
 
 
-
+    public GameObject close;
+    public void closeScrum()
+    {
+        close.SetActive(false);
+    }
     public void onClickchoice1()
     {
 

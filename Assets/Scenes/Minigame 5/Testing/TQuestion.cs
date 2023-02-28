@@ -10,6 +10,15 @@ public class TQuestion : MonoBehaviour
     public GameObject CorrectChoice;
     public int scoremin5 = 5;
 
+    public GameObject close;
+    public void closeScrum()
+    {
+        close.SetActive(false);
+    }
+    public void Scrum()
+    {
+        close.SetActive(true);
+    }
 
 
 
@@ -29,6 +38,7 @@ public class TQuestion : MonoBehaviour
         }
         else
         {
+            Scrum();
             scoremin5--;
             Debug.Log("-1");
         }
@@ -49,6 +59,7 @@ public class TQuestion : MonoBehaviour
         }
         else
         {
+            Scrum();
             scoremin5--;
             Debug.Log("-1");
         }
@@ -69,6 +80,7 @@ public class TQuestion : MonoBehaviour
         }
         else
         {
+            Scrum();
             scoremin5--;
             Debug.Log("-1");
         }
@@ -89,6 +101,7 @@ public class TQuestion : MonoBehaviour
         }
         else
         {
+            Scrum();
             scoremin5--;
             Debug.Log("-1");
         }
