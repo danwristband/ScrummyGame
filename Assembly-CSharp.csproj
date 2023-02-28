@@ -110,6 +110,11 @@
     <Compile Include="Assets\Offer.cs" />
     <Compile Include="Assets\UI\Minigame 2\play.cs" />
     <Compile Include="Assets\Scripts4\heart.cs" />
+    <Compile Include="Assets\Scenes\Developer\howto\howtopre1.cs" />
+    <Compile Include="Assets\Scenes\Developer\howto\howto1.cs" />
+    <Compile Include="Assets\Scenes\Developer\howto\howto2.cs" />
+    <Compile Include="Assets\Scenes\Developer\howto\howto3.cs" />
+    <Compile Include="Assets\Scenes\Developer\howto\howto4.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AurynSky\Gems Ultimate Pack\READ ME.txt" />

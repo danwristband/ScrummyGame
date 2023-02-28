@@ -263,7 +263,7 @@ public class GameCtrl : MonoBehaviour
     public void Goto()
     {
         PlayerPrefs.SetFloat("data", bath[0]);
-        SceneManager.LoadScene("minigame1");
+        SceneManager.LoadScene("Howto 1");
 
     }
 }

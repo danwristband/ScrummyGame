@@ -29,7 +29,7 @@ public class finiteHR : MonoBehaviour
 
     public void confirmclick()
     {
-        SceneManager.LoadScene("Minigame 2");
+        SceneManager.LoadScene("Howto 2");
     }
 
     void Start()
