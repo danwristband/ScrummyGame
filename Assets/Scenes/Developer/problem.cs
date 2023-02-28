@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class problem : MonoBehaviour
 {
     public string teamname;
-    public Text teamnameText;
+    //public Text teamnameText;
     public Text text;
     public GameObject chatbox;
     public int round = 0;
@@ -17,7 +17,7 @@ public class problem : MonoBehaviour
 
 
         chatbox.SetActive(true);
-        teamnameText.text = teamname;
+        //teamnameText.text = teamname;
 
     }
 

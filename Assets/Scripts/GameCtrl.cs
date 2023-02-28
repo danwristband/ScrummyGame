@@ -89,7 +89,7 @@ public class GameCtrl : MonoBehaviour
                     {
 
                     }
-                    else { MakeGraph(); }
+                    else { MakeGraph();  }
 
 
 
@@ -177,23 +177,32 @@ public class GameCtrl : MonoBehaviour
 
         for (int i = 0; i < values.Length; i++) //0,1,2,3
         {
-          if (i % 4 == 0)
+            if (i % 4 == 0)
             {
                 Image newbg = Instantiate(bg) as Image;
                 newbg.transform.SetParent(transform, false);
             }
-          
+
             Image newPice = Instantiate(picePrefab) as Image;
             newPice.transform.SetParent(transform, false);
             newPice.color = piceColores[i];
             newPice.fillAmount = values[i] / total;
             newPice.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, zRotation));
             zRotation -= newPice.fillAmount * 360f;
-            if (values[i] > 1) {showPercent.text = values[i] + "%"; }
-             
+
+
+
+            if (i == 3)
+            {
+                if (values[i] > 1) { showPercent.text = input[3].text + "%"; }
+            }
+            else
+            {
+                if (values[i] > 1) { showPercent.text = values[i] + "%"; }
+            }
+
+
         }
-     
-        
     }
 
     void CalPercentToBaht()
@@ -215,7 +224,7 @@ public class GameCtrl : MonoBehaviour
             scrum.gameObject.SetActive(true);
             okay.gameObject.SetActive(true);
             
-            pass.text = "PASS";
+            pass.text = "";
             chek= true;
            
         }
@@ -262,8 +271,8 @@ public class GameCtrl : MonoBehaviour
 ;    }
     public void Goto()
     {
-        PlayerPrefs.SetFloat("data", bath[0]);
-        SceneManager.LoadScene("Howto 1");
+        //PlayerPrefs.SetFloat("data", bath[0]);
+        SceneManager.LoadScene("minigame1");
 
     }
 }

@@ -70,7 +70,7 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
 
-        budget = PlayerPrefs.GetFloat("data");
+        budget = 2500000;
         getBudget = budget;
         budgettxt.text = "Budget : " + budget + " Baht";
         Debug.Log(budget);
