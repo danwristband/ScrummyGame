@@ -10,7 +10,15 @@ public class DQuestion : MonoBehaviour
     public int scoremin5 = 5;
 
 
-
+    public GameObject close;
+    public void closeScrum()
+    {
+        close.SetActive(false);
+    }
+    public void Scrum()
+    {
+        close.SetActive(true);
+    }
 
     public void choicecheck1()
     {
@@ -29,6 +37,7 @@ public class DQuestion : MonoBehaviour
         }
         else
         {
+            Scrum();
             scoremin5--;
             Debug.Log("-1");
         }
@@ -49,6 +58,7 @@ public class DQuestion : MonoBehaviour
         }
         else
         {
+            Scrum();
             scoremin5--;
             Debug.Log("-1");
         }
@@ -69,6 +79,7 @@ public class DQuestion : MonoBehaviour
         }
         else
         {
+            Scrum();
             scoremin5--;
             Debug.Log("-1");
         }
@@ -89,6 +100,7 @@ public class DQuestion : MonoBehaviour
         }
         else
         {
+            Scrum();
             scoremin5--;
             Debug.Log("-1");
         }

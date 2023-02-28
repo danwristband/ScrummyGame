@@ -15,10 +15,14 @@ public class Protect : MonoBehaviour
     public int[] choiceArray = new int[6];
     public int count=0;
     public Text chooseText  ;
+    
     public Text SceneR2;
 
-
-
+    public GameObject close;
+    public void closeScrum()
+    {
+        close.SetActive(false);
+    }
     public void onClickchoice1()
     {
 
