@@ -15,8 +15,24 @@ public class play2 : MonoBehaviour
     public Vector2 accountInitPos, chatInitPos, paymentInitPos, productInitPos, regisInitPos, profileInitPos;
     public double yaccount, ychat, ypayment, yproduct, yregis, yprofile;
     public GameObject miniheart1, miniheart2, miniheart3, miniheart4 ,miniheart5;
+    public GameObject Scrummaster;
     public int score = 5;
     public Text scoreText;
+
+
+
+
+    public void scrum()
+    {
+        Scrummaster.SetActive(true);
+
+    }
+    public void scrumclose()
+    {
+
+        Scrummaster.SetActive(false);
+    }
+
 
     public void orderaccount(double yaxis)
     {
@@ -295,6 +311,7 @@ public class play2 : MonoBehaviour
         }
         else
         {
+            
             score--;
             scoreText.text = "Score: " + score.ToString();
             Debug.Log("product" + product.transform.position);
@@ -308,18 +325,22 @@ public class play2 : MonoBehaviour
 
         if (score == 4)
         {
+            scrum();
             miniheart5.SetActive(false);
         }
         else if (score == 3)
         {
+            scrum();
             miniheart4.SetActive(false);
         }
         else if (score == 2)
         {
+            scrum();
             miniheart3.SetActive(false);
         }
         else if (score == 1)
         {
+            scrum();
             miniheart2.SetActive(false);
         }
 
