@@ -12,6 +12,7 @@ public class play : MonoBehaviour
      public GameObject  Choice1, Choice2, Choice3, Choice4;
      public GameObject Requirement, Game;
      public GameObject miniheart1, miniheart2, miniheart3, miniheart4, miniheart5;
+     public GameObject Scrummaster;
         public int score = 5;
      public Text scoreText;
      public Text pass;
@@ -31,6 +32,17 @@ public class play : MonoBehaviour
     }
 
      
+    public void scrum()
+    {
+        Scrummaster.SetActive(true);
+
+    }
+    public void scrumclose()
+    {
+
+        Scrummaster.SetActive(false);
+    }
+
 
     public void DropChoice( GameObject Choice ,Vector2 ChoiceInitPos)
     {
@@ -161,6 +173,8 @@ public class play : MonoBehaviour
                 
                 Choice4.transform.position = Choice4InitPos;
             }
+
+            scrum();
 
             score -= 1; 
 
