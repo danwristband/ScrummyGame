@@ -82,8 +82,10 @@ public class ButtonOnClick : MonoBehaviour
             PlayerPrefs.SetInt("scDisplay", score);
 			//LoadScenc
 			SceneManager.LoadScene("Score");
-			
-        }
+			passtxt.text = "";
+
+
+		}
 	}
 
 
@@ -109,7 +111,7 @@ void TaskOnClick()
 			passtxt.gameObject.SetActive(true);
 			fail1txt.gameObject.SetActive(false);
 			//next.gameObject.SetActive(true);
-			passtxt.text = "pass";
+			passtxt.text = "ดีใจด้วย! ที่เล่นเกมผ่านซักที";
 			
 			okay.gameObject.SetActive(true);
 			/*

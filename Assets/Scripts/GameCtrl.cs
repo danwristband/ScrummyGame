@@ -52,13 +52,14 @@ public class GameCtrl : MonoBehaviour
         bgfade.gameObject.SetActive(false);
         scrum.gameObject.SetActive(false);
         okay.gameObject.SetActive(false);
+        
     }
 
     void UpdateDisplayText(string value)
     {
         for (int i = 0; i < input.Length; i++)
         {
-
+            //input[i]=input[i]/()
             //Destroy(MakeGraph); 
             value2[i] = input[i].text;
             prevalues[i] = values[i];
@@ -224,7 +225,7 @@ public class GameCtrl : MonoBehaviour
             scrum.gameObject.SetActive(true);
             okay.gameObject.SetActive(true);
             
-            pass.text = "คุณผ่านแล้ว";
+            pass.text = "คุณจัดการแบ่งงบประมาณได้เหมาะสมแล้ว";
             chek= true;
            
         }

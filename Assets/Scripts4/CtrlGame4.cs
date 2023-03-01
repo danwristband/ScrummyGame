@@ -837,7 +837,7 @@ private void Awake()
 
                 }
 
-                passmini4Text.text = "You Pass";
+                passmini4Text.text = "ดีใจด้วย! ที่เล่นเกมผ่านซักที";
                 
                
 
