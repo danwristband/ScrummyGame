@@ -56,11 +56,14 @@ public class problem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+        round = PlayerPrefs.GetInt("problem");
+        
         if(round== 0) { 
-        round = PlayerPrefs.GetInt("problem")+1;
+        round = 1;
+            Debug.Log(round);
                        
         }
-        round = PlayerPrefs.GetInt("problem");
         teamname = PlayerPrefs.GetString("Teamname");
         Invoke("openChatbox", 4.0f);
 

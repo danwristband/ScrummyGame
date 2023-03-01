@@ -16,6 +16,12 @@ public class scrummy : MonoBehaviour
 
         SceneManager.LoadScene("GameStarts");
     }
+    public void quitgame()
+    {
+        Application.Quit();
+        Debug.Log("quit");
+    }
+
 
     void Start()
     {

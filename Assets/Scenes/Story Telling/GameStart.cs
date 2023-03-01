@@ -11,11 +11,17 @@ public class GameStart : MonoBehaviour
         Debug.Log("Click");
         SceneManager.LoadScene("GameMode");
     }
+
+    public void quitgame()
+    {
+        Application.Quit();
+        Debug.Log("quit");
+    }
     
     // Start is called before the first frame update
     void Start()
     {
-        
+       PlayerPrefs.DeleteAll();
     }
 
     // Update is called once per frame

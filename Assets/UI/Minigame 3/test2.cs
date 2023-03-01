@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
-using static UnityEditor.Progress;
+using UnityEditor;
 
 public class test2 : MonoBehaviour
 {

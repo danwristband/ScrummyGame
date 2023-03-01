@@ -70,7 +70,7 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
 
-        budget = 2500000;
+        budget = 3000000;
         getBudget = budget;
         budgettxt.text = "Budget : " + budget + " Baht";
         Debug.Log(budget);

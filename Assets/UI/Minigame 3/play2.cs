@@ -25,6 +25,7 @@ public class play2 : MonoBehaviour
     public void scrum()
     {
         Scrummaster.SetActive(true);
+        Scrummaster.transform.SetAsLastSibling();
 
     }
     public void scrumclose()
