@@ -28,8 +28,11 @@ public class scrummy : MonoBehaviour
         scoreall = PlayerPrefs.GetInt("player_score");
         Button Confirm = next.GetComponent<Button>();
         next.onClick.AddListener(clickplay);
-        
 
+        if (scoreall <= 0)
+        {
+            scoreall = 1;
+        }
 
         for (int i = 0; i < 5 - scoreall; i++)
         {

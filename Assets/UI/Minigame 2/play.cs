@@ -12,7 +12,7 @@ public class play : MonoBehaviour
      public GameObject  Choice1, Choice2, Choice3, Choice4;
      public GameObject Requirement, Game;
      public GameObject miniheart1, miniheart2, miniheart3, miniheart4, miniheart5;
-     public GameObject Scrummaster;
+     public GameObject Scrummaster,scrumwin;
         public int score = 5;
      public Text scoreText;
      public Text pass;
@@ -133,6 +133,12 @@ public class play : MonoBehaviour
 
 
     }
+
+    
+    public void gotoscore()
+    {   
+        SceneManager.LoadScene("Score");
+    }
     public void Scorecal()
     {
        
@@ -146,7 +152,9 @@ public class play : MonoBehaviour
             Debug.Log(score);
             PlayerPrefs.SetInt("scDisplay", score);
             PlayerPrefs.SetInt("mini2", score);
-            SceneManager.LoadScene("Score");
+            scrumwin.SetActive(true);
+
+            
         }
 
         else if (true)

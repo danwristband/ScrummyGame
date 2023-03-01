@@ -15,7 +15,7 @@ public class play2 : MonoBehaviour
     public Vector2 accountInitPos, chatInitPos, paymentInitPos, productInitPos, regisInitPos, profileInitPos;
     public double yaccount, ychat, ypayment, yproduct, yregis, yprofile;
     public GameObject miniheart1, miniheart2, miniheart3, miniheart4 ,miniheart5;
-    public GameObject Scrummaster;
+    public GameObject Scrummaster,scrumwin;
     public int score = 5;
     public Text scoreText;
 
@@ -245,6 +245,27 @@ public class play2 : MonoBehaviour
         
     }
 
+
+
+
+    public void gotoscore()
+    {
+        
+        SceneManager.LoadScene("Score");
+    }
+
+
+
+    public void scrumwinshow()
+    {
+
+        scrumwin.SetActive(true);
+        scrumwin.transform.SetAsLastSibling();
+    }
+
+
+
+
     public void checkPoint()
     {
         
@@ -259,13 +280,15 @@ public class play2 : MonoBehaviour
             && userProfile.transform.position == third.transform.position)
         {
             scoreText.text = "Score: " + score.ToString() + "Pass";
-            SceneManager.LoadScene("FinitePO");
            
             PlayerPrefs.SetInt("scDisplay", score);
             PlayerPrefs.SetInt("mini3", score);
-            SceneManager.LoadScene("Score");
-            
-            
+            scrumwinshow();
+
+
+
+
+
 
         }
 
@@ -275,7 +298,8 @@ public class play2 : MonoBehaviour
             scoreText.text = "Score: " + score.ToString() + "Pass";
             PlayerPrefs.SetInt("scDisplay", score);
             PlayerPrefs.SetInt("mini3", score);
-            SceneManager.LoadScene("Score");
+            scrumwinshow();
+
         }
         else if (product.transform.position == second.transform.position && payment.transform.position == first.transform.position
             && userProfile.transform.position == third.transform.position)
@@ -283,7 +307,7 @@ public class play2 : MonoBehaviour
             scoreText.text = "Score: " + score.ToString() + "Pass";
             PlayerPrefs.SetInt("scDisplay", score);
             PlayerPrefs.SetInt("mini3", score);
-            SceneManager.LoadScene("Score");
+            scrumwinshow();
 
         }
         else if (product.transform.position == second.transform.position && payment.transform.position == third.transform.position
@@ -292,7 +316,8 @@ public class play2 : MonoBehaviour
             scoreText.text = "Score: " + score.ToString() + "Pass";
             PlayerPrefs.SetInt("scDisplay", score);
             PlayerPrefs.SetInt("mini3", score);
-            SceneManager.LoadScene("Score");
+            scrumwinshow();
+
         }
         else if (product.transform.position == third.transform.position && payment.transform.position == second.transform.position
             && userProfile.transform.position == first.transform.position)
@@ -300,7 +325,8 @@ public class play2 : MonoBehaviour
             scoreText.text = "Score: " + score.ToString() + "Pass";
             PlayerPrefs.SetInt("scDisplay", score);
             PlayerPrefs.SetInt("mini3", score);
-            SceneManager.LoadScene("Score");
+            scrumwinshow();
+
         }
         else if (product.transform.position == third.transform.position && payment.transform.position == first.transform.position
            && userProfile.transform.position == second.transform.position)
@@ -308,7 +334,8 @@ public class play2 : MonoBehaviour
             scoreText.text = "Score: " + score.ToString() + "Pass";
             PlayerPrefs.SetInt("scDisplay", score);
             PlayerPrefs.SetInt("mini3", score);
-            SceneManager.LoadScene("Score");
+            scrumwinshow();
+
         }
         else
         {
@@ -322,28 +349,31 @@ public class play2 : MonoBehaviour
             Debug.Log(userProfile.transform.position);
             Debug.Log(third.transform.position);
 
+            if (score == 4)
+            {
+                scrum();
+                miniheart5.SetActive(false);
+            }
+            else if (score == 3)
+            {
+                scrum();
+                miniheart4.SetActive(false);
+            }
+            else if (score == 2)
+            {
+                scrum();
+                miniheart3.SetActive(false);
+            }
+            else if (score == 1)
+            {
+                scrum();
+                miniheart2.SetActive(false);
+            }
+
+
         }
 
-        if (score == 4)
-        {
-            scrum();
-            miniheart5.SetActive(false);
-        }
-        else if (score == 3)
-        {
-            scrum();
-            miniheart4.SetActive(false);
-        }
-        else if (score == 2)
-        {
-            scrum();
-            miniheart3.SetActive(false);
-        }
-        else if (score == 1)
-        {
-            scrum();
-            miniheart2.SetActive(false);
-        }
+       
 
 
     }

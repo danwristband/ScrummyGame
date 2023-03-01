@@ -24,7 +24,7 @@ public class introduce : MonoBehaviour
     }
     public void onClickk()
     {
-        SceneManager.LoadScene("office");
+        SceneManager.LoadScene("Howto walk");
     }
     void Start()
     {

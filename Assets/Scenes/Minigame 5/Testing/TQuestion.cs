@@ -11,6 +11,7 @@ public class TQuestion : MonoBehaviour
     public int scoremin5 = 5;
 
     public GameObject close;
+    public GameObject scrumwin;
     public void closeScrum()
     {
         close.SetActive(false);
@@ -20,7 +21,10 @@ public class TQuestion : MonoBehaviour
         close.SetActive(true);
     }
 
-
+    public void gotoT2()
+    {
+        SceneManager.LoadScene("T2");
+    }
 
     public void choicecheck1()
     {
@@ -31,7 +35,7 @@ public class TQuestion : MonoBehaviour
                 scoremin5 = 1;
             }
             PlayerPrefs.SetInt("min5test", scoremin5);
-            SceneManager.LoadScene("T2");
+            scrumwin.SetActive(true);
 
 
 
@@ -54,7 +58,7 @@ public class TQuestion : MonoBehaviour
             }
             Debug.Log("Pass");
             PlayerPrefs.SetInt("min5test", scoremin5);
-            SceneManager.LoadScene("T2");
+            scrumwin.SetActive(true);
 
         }
         else
@@ -75,7 +79,7 @@ public class TQuestion : MonoBehaviour
             }
             Debug.Log("Pass");
             PlayerPrefs.SetInt("min5test", scoremin5);
-            SceneManager.LoadScene("T2");
+            scrumwin.SetActive(true);
 
         }
         else
@@ -96,7 +100,7 @@ public class TQuestion : MonoBehaviour
             }
             Debug.Log("Pass");
             PlayerPrefs.SetInt("min5test", scoremin5);
-            SceneManager.LoadScene("T2");
+            scrumwin.SetActive(true);
 
         }
         else

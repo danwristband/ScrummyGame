@@ -28,7 +28,25 @@ public class AllRating : MonoBehaviour
         mini4 = PlayerPrefs.GetInt("mini4");
         mini5 = PlayerPrefs.GetInt("mini5");
 
-
+        if (mini1 <= 0)
+        {
+            mini1 = 1;
+        } 
+        if (mini2 <= 0)
+        {
+            mini2 = 1;
+        } 
+        if (mini3 <= 0)
+        {
+            mini3 = 1;
+        } 
+        if (mini4 <= 0)
+        {
+            mini4 = 1;
+        } if (mini5 <= 0)
+        {
+            mini5 = 1;
+        }
 
         Button Confirm = next.GetComponent<Button>();
         next.onClick.AddListener(clicknext);

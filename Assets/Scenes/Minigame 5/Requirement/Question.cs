@@ -14,6 +14,7 @@ public class Question : MonoBehaviour
 
 
     public GameObject close;
+    public GameObject scrumwin;
     public void closeScrum()
     {
         close.SetActive(false);
@@ -23,6 +24,10 @@ public class Question : MonoBehaviour
         close.SetActive(true);
     }
 
+    public void gotoR2()
+    {
+        SceneManager.LoadScene("R2");
+    }
     public void choicecheck1()
     {
         if(CorrectChoice == choice1)
@@ -33,7 +38,7 @@ public class Question : MonoBehaviour
             }
             Debug.Log("Pass");
             PlayerPrefs.SetInt("min5require", scoremin5);
-            SceneManager.LoadScene("R2");
+            scrumwin.SetActive(true);
            
 
            
@@ -56,8 +61,8 @@ public class Question : MonoBehaviour
             }
             Debug.Log("Pass");
             PlayerPrefs.SetInt("min5require", scoremin5);
-            SceneManager.LoadScene("R2");
-           
+            scrumwin.SetActive(true);
+
         }
         else
         {
@@ -77,8 +82,8 @@ public class Question : MonoBehaviour
             }
             Debug.Log("Pass");
             PlayerPrefs.SetInt("min5require", scoremin5);
-            SceneManager.LoadScene("R2");
-            
+            scrumwin.SetActive(true);
+
         }
         else
         {
@@ -98,8 +103,8 @@ public class Question : MonoBehaviour
             }
             Debug.Log("Pass"); 
             PlayerPrefs.SetInt("min5require", scoremin5);
-            SceneManager.LoadScene("R2");
-           
+            scrumwin.SetActive(true);
+
         }
         else
         {

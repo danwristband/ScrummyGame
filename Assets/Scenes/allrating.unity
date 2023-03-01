@@ -2502,10 +2502,10 @@ MonoBehaviour:
   - {fileID: 118630551}
   - {fileID: 59586827}
   mini1: 4
-  mini2: 0
-  mini3: 0
-  mini4: 2
-  mini5: 0
+  mini2: 1
+  mini3: 1
+  mini4: 1
+  mini5: 1
   scoreall: 0
   next: {fileID: 1845861096}
 --- !u!1 &1857352318
