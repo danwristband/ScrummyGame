@@ -11,6 +11,7 @@ public class R2 : MonoBehaviour
     public int[] choiceArray = new int[6];
     public bool[] choiceTrue = new bool[3];
     public Text SceneR2;
+    public GameObject first, second, third;
 
     public void fix1() {
         if (choiceArray[0]== 0)
@@ -58,6 +59,10 @@ public class R2 : MonoBehaviour
 
     }
 
+    public void gotoR2()
+    {
+        SceneManager.LoadScene("Require2");
+    }
     public void checkChoice()
     {
 
@@ -65,39 +70,46 @@ public class R2 : MonoBehaviour
         {
             
             SceneR2.text = "Pass";
-            SceneManager.LoadScene("Require2");
+            Invoke("gotoR2", 4f);
+            first.SetActive(true);
+            second.SetActive(true);
+            third.SetActive(true);
+
         }
         else if (choiceArray[0] == 1 && choiceArray[4] == 1)
         {
-            
+            first.SetActive(true);
+            second.SetActive(true);
             SceneR2.text = "Fix choice 3";
            
 
         }
         else if (choiceArray[4] == 1 && choiceArray[5] == 1)
         {
-           
+            second.SetActive(true);
+            third.SetActive(true);
             SceneR2.text = "Fix choice 1";
         }
         else if (choiceArray[0] == 1 && choiceArray[5] == 1)
         {
            
             SceneR2.text = "Fix choice 2";
-
+            first.SetActive(true);
+            third.SetActive(true);
         }
         else if (choiceArray[0] == 1)
         {
-            
+            first.SetActive(true);
             SceneR2.text = "Fix choice 2 and 3";
         }
         else if (choiceArray[4] == 1)
         {
-           
+            second.SetActive(true);
             SceneR2.text = "Fix choice 1 and 3";
         }
         else if (choiceArray[5] == 1)
         {
-           
+            third.SetActive(true);
             SceneR2.text = "Fix choice 1 and 2";
         }
         else { 

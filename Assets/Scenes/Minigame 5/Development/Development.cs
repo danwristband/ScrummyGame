@@ -10,7 +10,7 @@ public class Development : MonoBehaviour
 {
     public static Protect checkpoint;
 
-    GameObject first, second, third, fourth, fifth, sixth;
+    public GameObject first, second, third, fourth, fifth, sixth;
 
     public int[] choiceArray = new int[6];
     public int count = 0;
@@ -22,28 +22,39 @@ public class Development : MonoBehaviour
     {
         close.SetActive(false);
     }
-
     public void onClickchoice1()
     {
 
         if (count < 3)
         {
+
             if (choiceArray[0] == 0)
             {
                 choiceArray[0] = 1;
                 count++;
+                first.SetActive(true);
 
             }
             else
             {
                 choiceArray[0] = 0;
                 count--;
+                first.SetActive(false);
             }
 
-            Debug.Log(choiceArray[0] + "" + choiceArray[1] + "" + choiceArray[2] + "" + choiceArray[3] + "" + choiceArray[4] + "" + choiceArray[5]);
-            Debug.Log(count);
-            chooseText.text = count.ToString();
+
         }
+        else if (count == 3 && choiceArray[0] == 1)
+        {
+            choiceArray[0] = 0;
+            count--;
+            first.SetActive(false);
+            Debug.Log("--");
+
+        }
+        Debug.Log(choiceArray[0] + "" + choiceArray[1] + "" + choiceArray[2] + "" + choiceArray[3] + "" + choiceArray[4] + "" + choiceArray[5]);
+        Debug.Log(count);
+        chooseText.text = count.ToString();
 
     }
 
@@ -57,16 +68,28 @@ public class Development : MonoBehaviour
             {
                 choiceArray[1] = 1;
                 count++;
+                second.SetActive(true);
             }
             else
             {
                 choiceArray[1] = 0;
                 count--;
+                second.SetActive(false);
             }
-            Debug.Log(choiceArray[0] + "" + choiceArray[1] + "" + choiceArray[2] + "" + choiceArray[3] + "" + choiceArray[4] + "" + choiceArray[5]);
-            Debug.Log(count);
-            chooseText.text = count.ToString();
+
         }
+        else if (count == 3 && choiceArray[1] == 1)
+        {
+
+            count--;
+            choiceArray[1] = 0;
+            second.SetActive(false);
+            Debug.Log("--");
+        }
+
+        Debug.Log(choiceArray[0] + "" + choiceArray[1] + "" + choiceArray[2] + "" + choiceArray[3] + "" + choiceArray[4] + "" + choiceArray[5]);
+        Debug.Log(count);
+        chooseText.text = count.ToString();
     }
 
     public void onClickchoice3()
@@ -78,16 +101,27 @@ public class Development : MonoBehaviour
             {
                 choiceArray[2] = 1;
                 count++;
+                third.SetActive(true);
             }
             else
             {
                 choiceArray[2] = 0;
                 count--;
+                third.SetActive(false);
             }
-            Debug.Log(choiceArray[0] + "" + choiceArray[1] + "" + choiceArray[2] + "" + choiceArray[3] + "" + choiceArray[4] + "" + choiceArray[5]);
-            Debug.Log(count);
-            chooseText.text = count.ToString();
+
         }
+        else if (count == 3 && choiceArray[2] == 1)
+        {
+            choiceArray[2] = 0;
+            count--;
+            third.SetActive(false);
+            Debug.Log("--");
+        }
+        Debug.Log(choiceArray[0] + "" + choiceArray[1] + "" + choiceArray[2] + "" + choiceArray[3] + "" + choiceArray[4] + "" + choiceArray[5]);
+        Debug.Log(count);
+        chooseText.text = count.ToString();
+
     }
 
 
@@ -99,16 +133,26 @@ public class Development : MonoBehaviour
             {
                 choiceArray[3] = 1;
                 count++;
+                fourth.SetActive(true);
             }
             else
             {
                 choiceArray[3] = 0;
                 count--;
+                fourth.SetActive(false);
             }
-            Debug.Log(choiceArray[0] + "" + choiceArray[1] + "" + choiceArray[2] + "" + choiceArray[3] + "" + choiceArray[4] + "" + choiceArray[5]);
-            Debug.Log(count);
-            chooseText.text = count.ToString();
+
         }
+        else if (count == 3 && choiceArray[3] == 1)
+        {
+            choiceArray[3] = 0;
+            count--;
+            fourth.SetActive(false);
+            Debug.Log("--");
+        }
+        Debug.Log(choiceArray[0] + "" + choiceArray[1] + "" + choiceArray[2] + "" + choiceArray[3] + "" + choiceArray[4] + "" + choiceArray[5]);
+        Debug.Log(count);
+        chooseText.text = count.ToString();
     }
 
     public void onClickchoice5()
@@ -119,16 +163,26 @@ public class Development : MonoBehaviour
             {
                 choiceArray[4] = 1;
                 count++;
+                fifth.SetActive(true);
             }
             else
             {
                 choiceArray[4] = 0;
                 count--;
+                fifth.SetActive(false);
             }
-            Debug.Log(choiceArray[0] + "" + choiceArray[1] + "" + choiceArray[2] + "" + choiceArray[3] + "" + choiceArray[4] + "" + choiceArray[5]);
-            Debug.Log(count);
-            chooseText.text = count.ToString();
+
         }
+        else if (count == 3 && choiceArray[4] == 1)
+        {
+            choiceArray[4] = 0;
+            count--;
+            fifth.SetActive(false);
+            Debug.Log("--");
+        }
+        Debug.Log(choiceArray[0] + "" + choiceArray[1] + "" + choiceArray[2] + "" + choiceArray[3] + "" + choiceArray[4] + "" + choiceArray[5]);
+        Debug.Log(count);
+        chooseText.text = count.ToString();
     }
 
     public void onClickchoice6()
@@ -140,17 +194,29 @@ public class Development : MonoBehaviour
             {
                 choiceArray[5] = 1;
                 count++;
+                sixth.SetActive(true);
             }
             else
             {
                 choiceArray[5] = 0;
                 count--;
+                sixth.SetActive(false);
             }
-            Debug.Log(choiceArray[0] + "" + choiceArray[1] + "" + choiceArray[2] + "" + choiceArray[3] + "" + choiceArray[4] + "" + choiceArray[5]);
-            Debug.Log(count);
-            chooseText.text = count.ToString();
+
         }
+        else if (count == 3 && choiceArray[5] == 1)
+        {
+            choiceArray[5] = 0;
+            count--;
+            sixth.SetActive(false);
+            Debug.Log("--");
+        }
+
+        Debug.Log(choiceArray[0] + "" + choiceArray[1] + "" + choiceArray[2] + "" + choiceArray[3] + "" + choiceArray[4] + "" + choiceArray[5]);
+        Debug.Log(count);
+        chooseText.text = count.ToString();
     }
+
 
 
 

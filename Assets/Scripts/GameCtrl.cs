@@ -54,11 +54,26 @@ public class GameCtrl : MonoBehaviour
         okay.gameObject.SetActive(false);
         
     }
+    public string LimitInputToTwoChars(string input)
+    {
+        if (string.IsNullOrEmpty(input))
+        {
+            return input;
+        }
+
+        if (input.Length > 2)
+        {
+            input = input.Substring(0, 2);
+        }
+
+        return input;
+    }
 
     void UpdateDisplayText(string value)
     {
         for (int i = 0; i < input.Length; i++)
         {
+            input[i].text = LimitInputToTwoChars(input[i].text);
             //input[i]=input[i]/()
             //Destroy(MakeGraph); 
             value2[i] = input[i].text;
