@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Story Telling/GameStarts.unity
+- path: Assets/Scenes/Minigame 5/Phase/SceneP/Dev22.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
