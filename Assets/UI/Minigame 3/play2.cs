@@ -453,7 +453,7 @@ public class play2 : MonoBehaviour
 
 
 
-        if (Distance1 < 30)
+        if (Distance1 < 50)
         {
             position = profileInitPos;
 
@@ -465,7 +465,7 @@ public class play2 : MonoBehaviour
 
         }
 
-        else if (Distance2 < 30)
+        else if (Distance2 < 50)
         {
 
             position = profileInitPos;
@@ -479,7 +479,7 @@ public class play2 : MonoBehaviour
 
 
         }
-        else if (Distance3 < 30)
+        else if (Distance3 < 50)
         {
             position = profileInitPos;
 
@@ -490,7 +490,7 @@ public class play2 : MonoBehaviour
 
 
         }
-        else if (Distance4 < 30)
+        else if (Distance4 < 50)
         {
 
             position = profileInitPos;
@@ -501,7 +501,7 @@ public class play2 : MonoBehaviour
             productInitPos = position;
 
         }
-        else if (Distance5 < 30)
+        else if (Distance5 < 50)
         {
             position = profileInitPos;
 
@@ -536,7 +536,7 @@ public class play2 : MonoBehaviour
 
 
 
-        if (Distance1 < 30)
+        if (Distance1 < 50)
         {
             position = regisInitPos;
 
@@ -547,7 +547,7 @@ public class play2 : MonoBehaviour
             accountInitPos = position;
 
         }
-        else if (Distance2 < 30)
+        else if (Distance2 < 50)
         {
             Debug.Log(regisInitPos);
             position = regisInitPos;
@@ -561,7 +561,7 @@ public class play2 : MonoBehaviour
 
 
         }
-        else if (Distance3 < 30)
+        else if (Distance3 < 50)
         {
             position = regisInitPos;
 
@@ -572,7 +572,7 @@ public class play2 : MonoBehaviour
 
 
         }
-        else if (Distance4 < 30)
+        else if (Distance4 < 50)
         {
 
             position = regisInitPos;
@@ -584,7 +584,7 @@ public class play2 : MonoBehaviour
 
         }
 
-        else if (Distance6 < 30)
+        else if (Distance6 < 50)
         {
             position = regisInitPos;
 
@@ -615,7 +615,7 @@ public class play2 : MonoBehaviour
             Vector2 position;
 
 
-             if (Distance2 < 30)
+             if (Distance2 < 50)
             {
                 Debug.Log(accountInitPos);
                 position = accountInitPos;
@@ -629,7 +629,7 @@ public class play2 : MonoBehaviour
 
 
             }
-            else if (Distance3 < 30)
+            else if (Distance3 < 50)
             {
                 position = accountInitPos;
 
@@ -640,7 +640,7 @@ public class play2 : MonoBehaviour
 
 
             }
-            else if (Distance4 < 30)
+            else if (Distance4 < 50)
             {
 
                 position = accountInitPos;
@@ -651,7 +651,7 @@ public class play2 : MonoBehaviour
                 productInitPos = position;
 
             }
-            else if (Distance5 < 30)
+            else if (Distance5 < 50)
             {
                 position = accountInitPos;
 
@@ -661,7 +661,7 @@ public class play2 : MonoBehaviour
                 regisInitPos = position;
 
             }
-            else if (Distance6 < 30)
+            else if (Distance6 < 50)
             {
                 position = accountInitPos;
 
@@ -691,7 +691,7 @@ public class play2 : MonoBehaviour
 
 
 
-            if (Distance1 < 30)
+            if (Distance1 < 50)
             {
                 position = chatInitPos;
 
@@ -703,7 +703,7 @@ public class play2 : MonoBehaviour
 
             }
             
-            else if (Distance3 < 30)
+            else if (Distance3 < 50)
             {
                 position = chatInitPos;
 
@@ -714,7 +714,7 @@ public class play2 : MonoBehaviour
 
 
             }
-            else if (Distance4 < 30)
+            else if (Distance4 < 50)
             {
 
                 position = chatInitPos;
@@ -725,7 +725,7 @@ public class play2 : MonoBehaviour
                 productInitPos = position;
 
             }
-            else if (Distance5 < 30)
+            else if (Distance5 < 50)
             {
                 position = chatInitPos;
 
@@ -735,7 +735,7 @@ public class play2 : MonoBehaviour
                 regisInitPos = position;
 
             }
-            else if (Distance6 < 30)
+            else if (Distance6 < 50)
             {
                 position = chatInitPos;
 
@@ -766,7 +766,7 @@ public class play2 : MonoBehaviour
 
 
 
-            if (Distance1 < 30)
+            if (Distance1 < 50)
             {
                 position = paymentInitPos;
 
@@ -777,7 +777,7 @@ public class play2 : MonoBehaviour
                 accountInitPos = position;
 
             }
-            else if (Distance2 < 30)
+            else if (Distance2 < 50)
             {
                 Debug.Log(paymentInitPos);
                 position = paymentInitPos;
@@ -792,7 +792,7 @@ public class play2 : MonoBehaviour
 
             }
            
-            else if (Distance4 < 30)
+            else if (Distance4 < 50)
             {
 
                 position = paymentInitPos;
@@ -803,7 +803,7 @@ public class play2 : MonoBehaviour
                 productInitPos = position;
 
             }
-            else if (Distance5 < 30)
+            else if (Distance5 < 50)
             {
                 position = paymentInitPos;
 
@@ -813,7 +813,7 @@ public class play2 : MonoBehaviour
                 regisInitPos = position;
 
             }
-            else if (Distance6 < 30)
+            else if (Distance6 < 50)
             {
                 position = paymentInitPos;
 
@@ -843,7 +843,7 @@ public class play2 : MonoBehaviour
 
 
 
-            if (Distance1 < 30)
+            if (Distance1 < 50)
             {
                 position = productInitPos;
 
@@ -854,7 +854,7 @@ public class play2 : MonoBehaviour
                 accountInitPos = position;
 
             }
-            else if (Distance2 < 30)
+            else if (Distance2 < 50)
             {
                 Debug.Log(productInitPos);
                 position = productInitPos;
@@ -868,7 +868,7 @@ public class play2 : MonoBehaviour
 
 
             }
-            else if (Distance3 < 30)
+            else if (Distance3 < 50)
             {
                 position = productInitPos;
 
@@ -880,7 +880,7 @@ public class play2 : MonoBehaviour
 
             }
             
-            else if (Distance5 < 20)
+            else if (Distance5 < 50)
             {
                 position = productInitPos;
 
@@ -890,7 +890,7 @@ public class play2 : MonoBehaviour
                 regisInitPos = position;
 
             }
-            else if (Distance6 < 30)
+            else if (Distance6 < 50)
             {
                 position = productInitPos;
 
