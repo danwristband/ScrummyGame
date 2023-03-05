@@ -22,10 +22,14 @@ public class ButtonOnClick : MonoBehaviour
 	public bool chek;
 	public string[] textErr;
 	public bool check22; 
+	public bool[] check222; 
 	public bool check33;
+	public int[] check333;
+	
 	public bool checkT; 
 	public bool checkB;
-
+	public string[] nicknametext;
+	public string[] checkRolltext;
 
 
 	void Start()
@@ -53,8 +57,14 @@ public class ButtonOnClick : MonoBehaviour
 		fail1txt.gameObject.SetActive(false);
 
 		int oldValue = PlayerPrefs.GetInt("OldValue");
-
+		
 	}
+
+	
+
+
+
+
 	/*void ClickNext()
 	{ //LoadScenc
 		SceneManager.LoadScene("premini4");
@@ -91,9 +101,25 @@ public class ButtonOnClick : MonoBehaviour
 
 void TaskOnClick()
 	{
+
+		string tempRoll = "";
+		string tempText = "";
+		for (int i = 0; i < check333.Length; i++)
+		{
+			check333[i] = LevelManager.Instance.check333[i];
+			
+
+		}
+
+		for (int i = 0; i < LevelManager.Instance.check.Length; i++)
+		{
+			check222[i] = LevelManager.Instance.check[i];
+		}
+
 		Debug.Log("You have clicked the button!");
 		 check22 = LevelManager.Instance.check22;
         check33 = LevelManager.Instance.check33;
+       
 		checkT = LevelManager.Instance.checkTime;
 		checkB = LevelManager.Instance.checkBudget;
 		
@@ -146,8 +172,17 @@ void TaskOnClick()
 
 			if (check22 == false)
 			{
-				fail1txt.text += "ทีมของคุณยังมีตำแหน่งไม่ครบ\n";
+				
+				for (int i = 0; i < LevelManager.Instance.check.Length; i++)
+				{
+					if (LevelManager.Instance.check[i] == false)
+					{
+						tempRoll += " " + checkRolltext[i];
 
+
+					}
+				}
+				fail1txt.text += "ทีมของคุณยังขาดตำแหน่ง "+tempRoll+"\n";
 			}
             else
             {
@@ -157,7 +192,19 @@ void TaskOnClick()
 
 			if (check33 == false)
 			{
-				fail1txt.text += "การจับคู่ระหว่างบทบาทและสกิลยังไม่ถูกต้อง\n";
+				for(int j=0; j<nicknametext.Length; j++)
+                {
+                    if (check333[j] == 0)
+                    {
+						tempText += (" " + nicknametext[j]+ " ");
+						
+
+					}
+					
+                }
+
+				fail1txt.text += "สกิลของ" + tempText + "ยังไม่เหมาะสมกับตำแหน่ง\n";
+
 
 
 			}
@@ -170,7 +217,7 @@ void TaskOnClick()
 
 			if (checkT == false)
 			{
-				fail1txt.text += "เวลาส่งมอบยังเกินกำหนด\n";
+				fail1txt.text += "เวลาส่งมอบยังเกิน 8 เดือน\n";
 
             }
             else

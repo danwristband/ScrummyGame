@@ -207,7 +207,6 @@ public class GameCtrl : MonoBehaviour
             zRotation -= newPice.fillAmount * 360f;
 
 
-
             if (i == 3)
             {
                 if (values[i] > 1) { showPercent.text = input[3].text + "%"; }
@@ -217,17 +216,19 @@ public class GameCtrl : MonoBehaviour
                 if (values[i] > 1) { showPercent.text = values[i] + "%"; }
             }
 
-
         }
     }
 
     void CalPercentToBaht()
     {
+        string formattedNumber;
         for (int i = 0; i < values.Length; i++)
         {
             bath[i] = (values[i] / 100) * 5000000;
-            
-            showBaht[i].text = " " + bath[i] + "  Baht";
+
+            formattedNumber = bath[i].ToString("n0");
+
+            showBaht[i].text = " " + formattedNumber + "  ฿";
         }
     }
 

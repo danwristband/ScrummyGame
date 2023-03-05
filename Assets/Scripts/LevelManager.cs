@@ -65,19 +65,24 @@ public class LevelManager : MonoBehaviour
     public string[] nickname= { "Leo","Emma","Jacob","Alan","Grace","Irene","Morgan","Sarah","Oscar"};
     float getBudget;
     public GridLayoutGroup[] gridLayoutGroup;
+    public int[] check333;
+    public string[] check333text;
 
+    public bool[] check;
 
     void Start()
     {
 
         budget = 2800000;
         getBudget = budget;
-        budgettxt.text = "Budget : " + budget + " Baht";
+        string formattedNumber = budget.ToString("n0");
+        budgettxt.text = "Budget : " + formattedNumber + " ฿";
         Debug.Log(budget);
 
         for(int i=0; i<PkeepM.Length; i++)
         {
             position[i] = checkM[i].transform.parent;
+            check333[i] = 2;
         } 
         
         
@@ -327,17 +332,21 @@ public class LevelManager : MonoBehaviour
             }
         }
         Debug.Log("budget2 : " + budget2);
-        budgettxt.text = "Budget : " + budget2 + " ฿";
+        string formattedNumber = budget2.ToString("n0");
+        budgettxt.text = "Budget : " + formattedNumber + " ฿";
         estimateTimetxt.text = "Estimate Time : " + estimateTime + " month";
     }
     public void score3(PointerEventData eventData)
     {
         bool ans; bool ans1; 
         check22 = false;
-
-        bool[] check = { false, false, false, false, false };
         Debug.Log("Score3");
         Debug.Log("member : " + eventData.pointerDrag);
+
+        for(int i=0; i<check.Length; i++)
+        {
+            check[i] = false;
+        }
 
         for (int i=0; i<checkM.Length; i++)
         {
@@ -357,62 +366,6 @@ public class LevelManager : MonoBehaviour
             }
 
         }
-        /*
-        for (int i = 0; i < checkM.Length; i++)
-        {
-            if (Equals(eventData.pointerDrag, checkM[i])==true)
-            {
-                PrevPkeepM[i] = PkeepM[i];
-                PkeepM[i] = eventData.pointerEnter;
-            }  
-            
-   
-
-        }
-
-        for (int i = 0; i < keepRole.Length; i++)
-        {
-           for(int j=0; j <checkP.Length; j++)
-            {
-                if (Equals(keepRole[j], checkP[i])==true)
-                {
-                    keepMem[i] = checkM[j];
-                }
-               
-            }
-
-        }
-        for (int i = 0; i < checkM.Length; i++)
-        {
-            if (Equals(eventData.pointerEnter, checkMMM[i]) == true)
-            {
-                PrevPkeepM[i] = checkMMM[i];
-                keepMem[i] = null;
-            }
-        }
-
-
-
-
-            for (int i = 0; i < checkM.Length; i++)
-        {       if (Equals(eventData.pointerDrag, checkM[i]) == true)
-                  {
-                    for (int j = 0; j < PrevPkeepM.Length; j++)
-                    { 
-                  
-                            if (Equals(PrevPkeepM[i], checkP[j]) == true)
-                                {
-                        Debug.Log("checkkkkkkkkkkkkk : " + PrevPkeepM[i] + " | " +j);
-                        
-                    }
-                   
-                   
-
-                }
-            }
-          
-        }
-        */
        
 
 
@@ -427,18 +380,23 @@ public class LevelManager : MonoBehaviour
 
                     switch (skillCheck[i])
                     {
-                        case "Scrum" : check[0] = true; break;
-                        case "Leader": check[1] = true; break;
+                        case "Scrum" : check[0] =   true ; break;
+                        case "Leader": check[1] =    true; break;
                         case "Programmer": check[2] = true; break;
-                        case "Design": check[3] = true; break;
-                        case "Testing": check[4] = true; break;  
+                        case "Design": check[3] =    true; break;
+                        case "Testing": check[4] =  true; break;  
                         default:  break;  
                     }
-                    
-                        
+
+
                 }
+               
+              
             }      
         }
+
+
+
         if(check[0] == true && check[1] == true && check[2] == true && check[3] == true && check[4])
         {
             check22 = true;
@@ -452,7 +410,8 @@ public class LevelManager : MonoBehaviour
     {
         Debug.Log("Score444444444");
         bool ans1;
-        check33 = false;
+        check33 = true;
+        
         string checkPositionNow=null;
 
         for (int i =0; i<keepRole.Length; i++)
@@ -469,19 +428,25 @@ public class LevelManager : MonoBehaviour
                         Debug.Log("Role : " + eventData.pointerEnter.name);
                         switch (eventData.pointerEnter.name)
                         {
-                            case "ScrumMaster"  : Debug.Log("position : " + skillCheck[j]); checkPositionNow = skillCheck[j]; break;
-                            case "LeadDev"      : Debug.Log("position : " + skillCheck[j]); checkPositionNow = skillCheck[j]; break;
-                            case "Dev"          : Debug.Log("position : " + skillCheck[j]); checkPositionNow = skillCheck[j]; break;
-                            case "Designer"     : Debug.Log("position : " + skillCheck[j]); checkPositionNow = skillCheck[j]; break;
-                            case "Tester"       : Debug.Log("position : " + skillCheck[j]); checkPositionNow = skillCheck[j]; break;
-                            case "Dev2"         : Debug.Log("position : " + skillCheck[j]); checkPositionNow = skillCheck[j]; break;
-                            case "Designer2"    : Debug.Log("position : " + skillCheck[j]); checkPositionNow = skillCheck[j]; break;
-                            case "Tester2"      : Debug.Log("position : " + skillCheck[j]); checkPositionNow = skillCheck[j]; break;
-                            case "Dev3"         : Debug.Log("position : " + skillCheck[j]); checkPositionNow = skillCheck[j]; break;
+                            case "ScrumMaster"  : checkPositionNow = skillCheck[j]; break;
+                            case "LeadDev"      : checkPositionNow = skillCheck[j]; break;
+                            case "Dev"          : checkPositionNow = skillCheck[j]; break;
+                            case "Designer"     : checkPositionNow = skillCheck[j]; break;
+                            case "Tester"       : checkPositionNow = skillCheck[j]; break;
+                            case "Dev2"         : checkPositionNow = skillCheck[j]; break;
+                            case "Designer2"    : checkPositionNow = skillCheck[j]; break;
+                            case "Tester2"      : checkPositionNow = skillCheck[j]; break;
+                            case "Dev3"         : checkPositionNow = skillCheck[j]; break;
                             default:
                                 Debug.Log("position : " + skillCheck[j]); checkPositionNow = skillCheck[j]; break;
                         }
                     }
+
+                    if (Equals(eventData.pointerEnter, checkMMM[j]))
+                    {
+                        check333[j] = 2;
+                    }
+
                 }
 
                 //Debug.Log(checkPositionNow);
@@ -494,20 +459,18 @@ public class LevelManager : MonoBehaviour
                             if (checkPositionNow == skill[j])
                             {
                                 if (p1[j] >= 3){
-                                    check33 = true;
+                                    check333[0] = 1;
                                 }
-                                else { check33 = false;}
-                                Debug.Log(skill[j] + ", p1 : " + p1[j] + " , " + check33);
+                                else { check333[0] = 0;}
                             }
                             break;
                         case "p2": 
                             if (checkPositionNow == skill[j])
                             {
                                 if (p2[j] >= 3){
-                                    check33 = true;
+                                    check333[1] = 1;
                                 }
-                                else { check33 = false; }
-                                Debug.Log(skill[j] + ", p2 : " + p2[j] + " , " + check33);
+                                else { check333[1] = 0; }
 
                             }
 
@@ -515,9 +478,8 @@ public class LevelManager : MonoBehaviour
                         case "p3":
                             if (checkPositionNow == skill[j])
                             {
-                                if (p3[j] >= 3){ check33 = true; }
-                                else { check33 = false; }
-                                Debug.Log(skill[j] + ", p3 : " + p3[j] + " , " + check33);
+                                if (p3[j] >= 3){ check333[2] = 1; }
+                                else { check333[2] = 0; }
 
                             }
                             break;
@@ -525,10 +487,9 @@ public class LevelManager : MonoBehaviour
                             if (checkPositionNow == skill[j])
                             {
                                 if (p4[j] >= 3){
-                                    check33 = true;
+                                    check333[3] = 1;
                                 }
-                                else { check33 = false; }
-                                Debug.Log(skill[j] + ", p4 : " + p4[j] + " , " + check33);
+                                else { check333[3] =0; }
 
                             }
                             break;
@@ -536,20 +497,18 @@ public class LevelManager : MonoBehaviour
                             if (checkPositionNow == skill[j])
                             {
                                 if (p5[j] >= 3) {
-                                    check33 = true;
+                                    check333[4] = 1;
                                 }
-                                else { check33 = false; }
-                                Debug.Log(skill[j] + ", p5 : " + p5[j] + " , " + check33);
+                                else { check333[4] = 0; }
                             }
                             break;
                         case "p6":
                             if (checkPositionNow == skill[j])
                             {
                                 if (p6[j] >= 3) {
-                                    check33 = true;
+                                    check333[5] = 1;
                                 }
-                                else { check33 = false; }
-                                Debug.Log(skill[j] + ", p6 : " + p6[j] + " , " + check33);
+                                else { check333[5] = 0; }
 
                             }
                             break;
@@ -557,10 +516,9 @@ public class LevelManager : MonoBehaviour
                             if (checkPositionNow == skill[j])
                             {
                                 if (p7[j] >= 3) {
-                                    check33 = true;
+                                    check333[6] = 1;
                                 }
-                                else { check33 = false; }
-                                Debug.Log(skill[j] + ", p7 : " + p7[j] + " , " + check33);
+                                else  { check333[6] = 0; }
 
                             }
                             break;
@@ -568,10 +526,9 @@ public class LevelManager : MonoBehaviour
                             if (checkPositionNow == skill[j])
                             {
                                 if (p8[j] >= 3)  {
-                                    check33 = true;
+                                    check333[7] = 1;
                                 }
-                                else { check33 = false; }
-                                Debug.Log(skill[j] + ", p8 : " + p8[j] + " , " + check33);
+                                else { check333[7] = 0; }
 
                             }
                             break;
@@ -579,10 +536,9 @@ public class LevelManager : MonoBehaviour
                             if (checkPositionNow == skill[j])
                             {
                                 if (p9[j] >= 3) {
-                                    check33 = true;
+                                    check333[8] = 1;
                                 }
-                                else { check33 = false; }
-                                Debug.Log(skill[j] + ", p9 : " + p9[j] + " , " + check33);
+                                else { check333[8] = 0; }
 
                             }
 
@@ -592,7 +548,15 @@ public class LevelManager : MonoBehaviour
                 }   
             }  
         }
-       Debug.Log("answer : " + check33); //เหลือเช็คว่า ตำแหน่ง macth ไหม
+
+        
+        for(int i=0; i<check333.Length; i++)
+        {
+            if (check333[i] == 2 ||check333[i] == 1) { check33 = check33 && true;}
+            else if (check333[i] == 0) { check33 = check33&& false; }
+            
+        }
+           Debug.Log("answer : " + check33);     //เหลือเช็คว่า ตำแหน่ง macth ไหม
         if (check33 == true)
         {
             Debug.Log("111chosen");

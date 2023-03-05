@@ -1999,9 +1999,27 @@ MonoBehaviour:
   - "\u0E43\u0E0A\u0E49\u0E40\u0E27\u0E25\u0E32\u0E2A\u0E48\u0E07\u0E40\u0E01\u0E34\u0E19\u0E01\u0E33\u0E2B\u0E19\u0E14"
   - "\u0E43\u0E0A\u0E49\u0E07\u0E1A\u0E1B\u0E23\u0E30\u0E21\u0E32\u0E13\u0E40\u0E01\u0E34\u0E19\u0E01\u0E33\u0E2B\u0E19\u0E14"
   check22: 0
+  check222: 0000000000
   check33: 0
+  check333: 000000000000000000000000000000000000000000000000000000000000000000000000
   checkT: 0
   checkB: 0
+  nicknametext:
+  - 'Navadon '
+  - Lachana
+  - Yuthapong
+  - 'Narathip '
+  - Narissara
+  - Sansanee
+  - Sakgasit
+  - Anya
+  - Santi
+  checkRolltext:
+  - ScrumMaster
+  - LeadDev
+  - Developer
+  - Designer
+  - Tester
 --- !u!1 &431826214
 GameObject:
   m_ObjectHideFlags: 0
@@ -2997,9 +3015,13 @@ MonoBehaviour:
   - "\u0E43\u0E0A\u0E49\u0E40\u0E27\u0E25\u0E32\u0E2A\u0E48\u0E07\u0E40\u0E01\u0E34\u0E19\u0E01\u0E33\u0E2B\u0E19\u0E14"
   - "\u0E43\u0E0A\u0E49\u0E07\u0E1A\u0E1B\u0E23\u0E30\u0E21\u0E32\u0E13\u0E40\u0E01\u0E34\u0E19\u0E01\u0E33\u0E2B\u0E19\u0E14"
   check22: 0
+  check222: 
   check33: 0
+  check333: 
   checkT: 0
   checkB: 0
+  nicknametext: []
+  checkRolltext: []
 --- !u!4 &622973902
 Transform:
   m_ObjectHideFlags: 0
@@ -3974,6 +3996,18 @@ MonoBehaviour:
   - {fileID: 1267574935}
   - {fileID: 1588927580}
   - {fileID: 1891647638}
+  check333: 000000000000000000000000000000000000000000000000000000000000000000000000
+  check333text:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  check: 0000000000
 --- !u!1 &778031837
 GameObject:
   m_ObjectHideFlags: 0
