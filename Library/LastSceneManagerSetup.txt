@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Minigame 5/Phase/SceneP/Dev22.unity
+- path: Assets/Scenes/Minigame 5/Testing/Testing.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

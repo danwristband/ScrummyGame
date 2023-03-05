@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 8064
+  controlID: 321
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -45,8 +45,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 212
-    y: 73.6
+    x: 213
+    y: 19
     width: 1031.6
     height: 438.2
   m_ViewDataDictionary: {fileID: 0}
@@ -83,7 +83,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 8041
+  controlID: 300
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 8042
+  controlID: 301
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -183,8 +183,8 @@ MonoBehaviour:
     y: 0
     width: 212
     height: 459.2
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -220,7 +220,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: c6bffeff86c3feffa6c3feffa8c3feffacc3feffb0c3feffb4c3feffb8c3feffbcc3feffc0c3feffc4c3feffc8c3feffccc3feffdac3feff5aeafeff5eeafeff62eafeff66eafeff6aeafeff6eeafeff72eafeff76eafeff7aeafeff7eeafeff82eafeff86eafeff8aeafeff8eeafeff92eafeff96eafeff9aeafeff9eeafeffa2eafeffa6eafeffaaeafeffaeeafeffb2eafeffb6eafeffbaeafeffbeeafeffc2eafeffc6eafeffcaeafeffceeafeffd2eafeffd6eafeffdaeafeffdeeafeffe2eafeffe6eafeffeaeafeffeeeafefff2eafefff6eafefffaeafefffeeafeff02ebfeff06ebfeff0aebfeff0eebfeff12ebfeff16ebfeff1aebfeff1eebfeff22ebfeff28ebfeff2cebfeff30ebfeff34ebfeff38ebfeff3cebfeff40ebfeff44ebfeff6a00ffff6e00ffff7200ffff7600ffff7a00ffffca02ffffea02ffffec02fffff002fffff402fffff802fffffc02ffff0003ffff0403ffff0803ffff0c03ffff1003ffff1e03ffff9e29ffffa229ffffa629ffffaa29ffffae29ffffb229ffffb629ffffba29ffffbe29ffffc229ffffc629ffffca29ffffce29ffffd229ffffd629ffffda29ffffde29ffffe229ffffe629ffffea29ffffee29fffff229fffff629fffffa29fffffe29ffff022affff062affff0a2affff0e2affff122affff162affff1a2affff1e2affff222affff262affff2a2affff2e2affff322affff362affff3a2affff3e2affff422affff462affff4a2affff4e2affff522affff562affff5a2affff5e2affff622affff662affff6c2affff702affff742affff782affff7c2affff802affff842affff882affffae3fffffb23fffffb63fffffba3fffffbe3ffffffe41ffff1e42ffff0043ffff0a43ffff1443ffff1e43ffff2843ffff3243ffff4043ffff4a43ffff5443ffff5e43ffff7243fffff869ffff006affff086affff106affff186affff206affff286affff326affff3a6affff426affff4c6affff546affff5c6affff646affff6c6affff746affff7c6affff846affff8c6affff966affffa06affffaa6affffb26affffba6affffc46affffce6affffd86affffe06affffe86afffff26afffffc6affff066bffff0e6bffff186bffff226bffff2c6bffff346bffff3c6bffff466bffff506bffff5a6bffff646bffff6c6bffff746bffff7c6bffff866bffff8e6bffff986bffffa06bffffa86bffffb26bffffc26bffffca6bffffd46bffffdc6bffffe46bfffff86bffff026cffff0e6cffff3e81ffff4881ffff5481ffff6081ffff6881ffff0683ffff0686ffff9297ffffce97ffffec97ffff2e9affff4e9affff309bffff3a9bffff449bffff4e9bffff589bffff629bffff709bffff7a9bffff849bffff8e9bffffa29bffff28c2ffff30c2ffff38c2ffff40c2ffff48c2ffff50c2ffff58c2ffff62c2ffff6ac2ffff72c2ffff7cc2ffff84c2ffff8cc2ffff94c2ffff9cc2ffffa4c2ffffacc2ffffb4c2ffffbcc2ffffc6c2ffffd0c2ffffdac2ffffe2c2ffffeac2fffff4c2fffffec2ffff08c3ffff10c3ffff18c3ffff22c3ffff2cc3ffff36c3ffff3ec3ffff48c3ffff52c3ffff5cc3ffff64c3ffff6cc3ffff76c3ffff80c3ffff8ac3ffff94c3ffff9cc3ffffa4c3ffffacc3ffffb6c3ffffbec3ffffc8c3ffffd0c3ffffd8c3ffffe2c3fffff2c3fffffac3ffff04c4ffff0cc4ffff14c4ffff28c4ffff32c4ffff3ec4ffff6ed9ffff78d9ffff84d9ffff90d9ffff98d9ffff14e5fffffee5ffff6cfbffffdeaf000086b1000022bd000036c1000060c200008ec30000b6270200
+      m_ExpandedIDs: 7afaffff6cfbffff66410000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -406,8 +406,8 @@ MonoBehaviour:
     y: 459.2
     width: 1245.6
     height: 271.59998
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 10}
   m_Panes:
   - {fileID: 10}
@@ -452,22 +452,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes/Developer/Scrum
+    - Assets/Scenes/Minigame 5/Phase/SceneP
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes/Developer/Scrum
+  - Assets/Scenes/Minigame 5/Phase/SceneP
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\DANWRISTBAND\Documents\GitHub\ScrummyGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 265.40002}
-    m_SelectedIDs: 3a410000
-    m_LastClickedID: 16698
-    m_ExpandedIDs: 00000000fc400000fe40000000410000024100000441000006410000084100000a4100000c4100000e41000010410000124100001441000016410000184100001c41000000ca9a3b
+    m_SelectedIDs: c4400000
+    m_LastClickedID: 16580
+    m_ExpandedIDs: 00000000a2400000a4400000a6400000a8400000aa400000ac400000ae400000b0400000b2400000b4400000b6400000b8400000ba400000bc400000be400000c240000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -495,7 +495,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000fc400000fe40000000410000024100000441000006410000084100000a4100000c4100000e410000104100001241000014410000164100001841000000ca9a3b
+    m_ExpandedIDs: 00000000a2400000a4400000a6400000a8400000aa400000ac400000ae400000b0400000b2400000b4400000b6400000b8400000ba400000bc400000be40000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -520,9 +520,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 32170100
-    m_LastClickedInstanceID: 71474
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 08410000
+    m_LastClickedInstanceID: 16648
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -633,7 +633,7 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 71474
+  m_LastInspectedObjectInstanceID: 16648
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_LockTracker:
