@@ -10,7 +10,7 @@ public class SceneP : MonoBehaviour
 
     public void clickRequire()
     {
-        SceneManager.LoadScene("Requiement");
+        SceneManager.LoadScene("Howto 5");
 
     }
     public void EndRequire()
