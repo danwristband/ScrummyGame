@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class CtrlGame4 : MonoBehaviour
 {
+    public Vector2[] prePositonItem;
     public static CtrlGame4 Instance;
     public int scoreMini4;
     public bool[] check;
@@ -71,6 +72,9 @@ public class CtrlGame4 : MonoBehaviour
     public Image[] heart;
     public int[] arrtempPri = { 0, 0, 0, 0, 0, 0 };
     public int[] indexArrPP = { 1, 2, 3, 4, 5, 6 };
+    public string[] nameitemsub;
+
+
     public void sortGetNewPriority()
     {
         int n = arrtempPri.Length, i, j, tmp, tmp2;
@@ -111,6 +115,14 @@ public class CtrlGame4 : MonoBehaviour
         {
             getNumberItemPriority[i] = indexArrPP[i];
         }
+
+
+
+        for(int i=0; i<prePosition.Length; i++)
+        {
+            prePositonItem[i] = item.tranform
+        }
+
 
         Button btn = yourButton.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);

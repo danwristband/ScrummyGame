@@ -420,6 +420,9 @@ public class LevelManager : MonoBehaviour
             {
                 Debug.Log("keepRole : " + keepRole[i]);
                 Debug.Log("member : " +eventData.pointerDrag.name);
+
+
+
                 for(int j=0; j<checkP.Length; j++)
                 {
                     ans1 = Equals(eventData.pointerEnter, checkP[j]);
@@ -440,19 +443,27 @@ public class LevelManager : MonoBehaviour
                             default:
                                 Debug.Log("position : " + skillCheck[j]); checkPositionNow = skillCheck[j]; break;
                         }
-                    }
 
-                    if (Equals(eventData.pointerEnter, checkMMM[j]))
-                    {
-                        check333[j] = 2;
+
+
+
+
                     }
+                  
+
+                    
 
                 }
 
                 //Debug.Log(checkPositionNow);
 
+
+
+
+               //if(Equals(eventData.pointerEnter,checkMMM[i]))
                 for (int j = 0; j < p1.Length; j++)
                 {
+                  
                     switch (eventData.pointerDrag.name)
                     {
                         case "p1": 
@@ -545,7 +556,16 @@ public class LevelManager : MonoBehaviour
                             break;
                         default: break;
                     } 
-                }   
+                }  
+                
+               
+
+
+
+            }
+            else
+            {
+                check333[i] = 2;
             }  
         }
 

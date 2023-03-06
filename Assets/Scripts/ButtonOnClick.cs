@@ -197,9 +197,10 @@ void TaskOnClick()
                     if (check333[j] == 0)
                     {
 						tempText += (" " + nicknametext[j]+ " ");
-						
 
-					}
+
+                    }
+                   
 					
                 }
 
