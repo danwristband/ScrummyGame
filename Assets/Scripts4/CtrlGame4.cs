@@ -120,7 +120,7 @@ public class CtrlGame4 : MonoBehaviour
 
         for(int i=0; i<prePosition.Length; i++)
         {
-            prePositonItem[i] = item.tranform
+            prePositonItem[i] = item[0].transform.position;
         }
 
 
