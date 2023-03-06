@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Developer/howto/Howto Pre1.unity
+- path: Assets/Scenes/Developer/howto/Howto 4.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

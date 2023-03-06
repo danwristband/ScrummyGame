@@ -19,7 +19,7 @@ public class howto4 : MonoBehaviour
     void Start()
     {
         Invoke("next1", 30f);
-        Invoke("skip", 5f);
+        Invoke("skip", 10f);
     }
 
     // Update is called once per frame
