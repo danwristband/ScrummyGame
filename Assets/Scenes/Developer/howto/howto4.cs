@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class howto4 : MonoBehaviour
 {
+    public GameObject next;
+    public void skip()
+    {
+        next.SetActive(true);
+    }
     public void next1()
     {
         SceneManager.LoadScene("mini4");
@@ -14,6 +19,7 @@ public class howto4 : MonoBehaviour
     void Start()
     {
         Invoke("next1", 30f);
+        Invoke("skip", 5f);
     }
 
     // Update is called once per frame

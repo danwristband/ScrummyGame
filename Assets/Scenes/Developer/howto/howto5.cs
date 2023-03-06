@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class howto5 : MonoBehaviour
 {
+    public GameObject next;
+    public void skip()
+    {
+        next.SetActive(true);
+    }
     public void next1()
     {
         SceneManager.LoadScene("Requiement");
@@ -13,6 +18,7 @@ public class howto5 : MonoBehaviour
     void Start()
     {
         Invoke("next1", 15f);
+        Invoke("skip", 4f);
     }
 
     // Update is called once per frame

@@ -119,6 +119,7 @@
     <Compile Include="Assets\Scenes\Developer\howto\howto4.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\ScritpsSound\MusicPlayerScript.cs" />
+    <Compile Include="Assets\Scenes\Developer\howto\howto5.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\Scenes\Minigame 5\Testing\TQuestion.cs" />
     <Compile Include="Assets\Scenes\Minigame 5\Phase\SceneP\scoreMIn5.cs" />
@@ -152,7 +153,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\UI\Minigame 2\play.cs" />
     <Compile Include="Assets\Scripts4\heart.cs" />
-    <Compile Include="Assets\Scenes\Developer\howto\howto5.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

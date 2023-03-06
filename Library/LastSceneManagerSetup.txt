@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Developer/Scrum/Scrum Intro.unity
+- path: Assets/Scenes/Developer/howto/Howto Pre1.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

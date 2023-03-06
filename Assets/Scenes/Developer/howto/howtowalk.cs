@@ -5,7 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class howtowalk : MonoBehaviour
 {
-    public void next()
+    public GameObject next;
+    public void skip()
+    {
+        next.SetActive(true);
+    }
+    public void next1()
     {
         SceneManager.LoadScene("office");
     }
@@ -13,7 +18,9 @@ public class howtowalk : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("next", 8f);
+        Invoke("next1", 8f);
+        Invoke("skip", 2f);
+
     }
 
 
