@@ -59,6 +59,10 @@ public class RVcontrol : MonoBehaviour
         pm.SetActive(false);
     }
 
+    public void nextmirr()
+    {
+        yourButton.transform.SetAsLastSibling();
+    }
 
     void Start()
     {
@@ -69,6 +73,7 @@ public class RVcontrol : MonoBehaviour
         Invoke("im4", 4f);
         Invoke("im5", 5f); 
         Invoke("PM",  6f); 
+        Invoke("nextmirr",  6.5f); 
    
         Button btn = yourButton.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);

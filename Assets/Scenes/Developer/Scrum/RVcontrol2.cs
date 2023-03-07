@@ -108,9 +108,14 @@ public class RVcontrol2 : MonoBehaviour
         pm.SetActive(false);
     }
 
+    public void mirrnext()
+    {
+        yourButton.transform.SetAsLastSibling();
+    }
 
     void Start()
     {
+       
         click = 1;
         Invoke("im1", 1f);
         Invoke("im2", 2f);
@@ -127,8 +132,9 @@ public class RVcontrol2 : MonoBehaviour
         Invoke("imm5", 7f); 
         Invoke("imm6", 7.5f);
         
-        Invoke("PM",  8f); 
-   
+        Invoke("PM",  8f);
+        Invoke("mirrnext", 8.5f);
+
         Button btn = yourButton.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
 
