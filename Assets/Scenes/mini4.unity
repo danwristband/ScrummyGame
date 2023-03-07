@@ -3801,8 +3801,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 154.69946, y: 42.139}
-  m_SizeDelta: {x: 890.9485, y: 254.28}
+  m_AnchoredPosition: {x: 174.01501, y: 42.139}
+  m_SizeDelta: {x: 805.9604, y: 254.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &182069905
 GameObject:
@@ -4851,18 +4851,18 @@ MonoBehaviour:
   - {fileID: 740191465}
   getItemSq: []
   nameItem:
-  - Real Time
-  - Text & Upload Photo
+  - Real Time Chat
+  - 'Chat Notification '
   - ATM & Mobile Banking
   - Top up & Cash
   - Product Feed
   - Post Product & Cart
   - Account System
-  - Verify Citizen
+  - Account Verification
   - Oauth & Registeration
-  - Password System
+  - Sign in/Sign out System
   - Profile System
-  - My Product List
+  - 'User Purchase '
   gridOfItem:
   - 
   - 
@@ -5035,14 +5035,12 @@ MonoBehaviour:
   textErr:
   - "Feature \u0E22\u0E48\u0E2D\u0E22 \u0E41\u0E25\u0E30 Feature \u0E2B\u0E25\u0E31\u0E01
     \u0E22\u0E31\u0E07\u0E27\u0E32\u0E07\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07"
-  - "\u0E43\u0E19 1 \u0E2D\u0E32\u0E17\u0E34\u0E15\u0E22\u0E4C \u0E04\u0E27\u0E23\u0E21\u0E35\u0E07\u0E32\u0E19\u0E44\u0E21\u0E48\u0E40\u0E01\u0E34\u0E19
-    2 Task \u0E07\u0E32\u0E19"
+  - "\u0E21\u0E35 task \u0E07\u0E32\u0E19\u0E40\u0E01\u0E34\u0E19 2 Task"
   - "\u0E44\u0E21\u0E48\u0E04\u0E27\u0E23\u0E43\u0E0A\u0E49\u0E40\u0E27\u0E25\u0E32\u0E40\u0E01\u0E34\u0E19\u0E01\u0E33\u0E2B\u0E19\u0E14
     (\u0E40\u0E27\u0E25\u0E32\u0E44\u0E21\u0E48\u0E04\u0E27\u0E23\u0E40\u0E01\u0E34\u0E19
     8 \u0E40\u0E14\u0E37\u0E2D\u0E19)"
-  - "\u0E04\u0E38\u0E13\u0E22\u0E31\u0E07\u0E08\u0E31\u0E14\u0E40\u0E23\u0E35\u0E22\u0E07
-    feature \u0E22\u0E48\u0E2D\u0E22\u0E44\u0E21\u0E48\u0E15\u0E23\u0E07\u0E15\u0E32\u0E21
-    priority"
+  - "Feature \u0E22\u0E48\u0E2D\u0E22 \u0E22\u0E31\u0E07\u0E27\u0E32\u0E07\u0E44\u0E21\u0E48\u0E15\u0E23\u0E07\u0E15\u0E32\u0E21
+    Priority  \u0E17\u0E35\u0E48"
   saveArrResultGrid:
   - 
   - 
@@ -5066,19 +5064,9 @@ MonoBehaviour:
   - {fileID: 1919328237}
   arrtempPri: 000000000000000000000000000000000000000000000000
   indexArrPP: 010000000200000003000000040000000500000006000000
-  nameitemsub:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  errorWeek: 
+  errorfeature: 
+  errorPri: 
 --- !u!4 &201788173
 Transform:
   m_ObjectHideFlags: 0

@@ -72,7 +72,12 @@ public class CtrlGame4 : MonoBehaviour
     public Image[] heart;
     public int[] arrtempPri = { 0, 0, 0, 0, 0, 0 };
     public int[] indexArrPP = { 1, 2, 3, 4, 5, 6 };
-    public string[] nameitemsub;
+    public string errorWeek;
+    public string errorfeature;
+    public string errorPri;
+
+
+
 
 
     public void sortGetNewPriority()
@@ -203,8 +208,30 @@ private void Awake()
         Instance = this;
     }
 
+    public void showErr(PointerEventData eventData)
+    {
+
+        for(int i =0; i<nameItem.Length; i++)
+        {
+            if(Equals(eventData.pointerDrag, item[i])==true)
+            {
+                
+                    Debug.Log("showErr ........." + nameItem[i]);
+            }
+        }
+       
+    }
+
+
+
+
+
+
+
     public void test2(PointerEventData eventData, GameObject[] gridSq)
     {
+
+        showErr(eventData);
         for (int w = 0; w < getitem.Length; w++)
         {
             float distance;
@@ -822,6 +849,7 @@ private void Awake()
             Debug.Log("You12");  
             int[] arrk = new int[36];
         Debug.Log("................................You have clicked the button!...............................");
+            
         Debug.Log("................................111111111111111...............................");
 
         check[0] = checkitemAndFeature();
@@ -866,7 +894,19 @@ private void Awake()
                 {
                     if (check[t]== false)
                     {
-                        ErrText[0].text += textErr[t]+"\n";
+
+                        if (t == 0)
+                        {
+                            ErrText[0].text += (errorfeature + "ยังไม่ Match กับ Feature หลัก\n");
+                        }else if (t == 1)
+                        {
+                            ErrText[0].text += ("Week ที่ " +errorWeek + " " +textErr[t]+"\n");
+                        }else if (t == 2){ErrText[0].text += textErr[t] + "\n"; }
+                        else  if (t == 3){
+                            ErrText[0].text +=  textErr[t] +" " +errorPri;
+                        }
+                       
+                         
                     }
                     else
                     {
@@ -980,7 +1020,8 @@ private void Awake()
 
         bool[] checkmatchPriority = { false, false, false, false, false, false };
         bool checkTrueMacth = false;
-        for(int g=0; g<arrPrioritySort.Length; g++)
+        errorPri = "";
+        for (int g=0; g<arrPrioritySort.Length; g++)
         {
             if (arrPrioritySort[g] == getNumberItemPriority[g])
             {
@@ -992,6 +1033,7 @@ private void Awake()
             {
                 checkmatchPriority[g] = false;
                 Debug.Log("priority " + (g+1) + " :" + checkmatchPriority[g]);
+                errorPri += " " + (g + 1);
             }
         }
         bool result = CheckAllTrue(checkmatchPriority);
@@ -1051,12 +1093,21 @@ private void Awake()
 
     }
 
-   
-   public bool[] CheckRowMoreThan2()// เอาไปใช้ตอนเช็ครวม 
+    public string ReplaceSpacesWithCommas(string input)
+    {
+        string output = input;
+        if (input.ToLower().Contains("spec"))
+        {
+            output = output.Replace(' ', ',');
+        }
+        return output;
+    }
+    public bool[] CheckRowMoreThan2()// เอาไปใช้ตอนเช็ครวม 
     { bool[] arrcheck2 = { true, false };
         int countTask = 0;
         arrKeepC = new int[colunm];
         arrKeepR = new int[row];
+        int temp = 0;
       
         for (int i = 0; i < colunm; i++)
         {
@@ -1072,14 +1123,19 @@ private void Awake()
             arrKeepC[i] = countTask;
             countTask = 0;
         }
-       
 
+        errorWeek = "";
         for (int p = 0; p < arrKeepC.Length; p++)
         {
-             if (arrKeepC[p] > 2)
+            if (arrKeepC[p] > 2)
             {
+                temp = p + 1;
                 Debug.Log(arrKeepC[p]);
+                Debug.Log("week No. " + temp);
 
+
+                errorWeek += " "+temp;
+                
                 Debug.Log("task more then 2 task in week");
                 arrcheck2[0] = arrcheck2[0] && false;
             }
@@ -1087,8 +1143,10 @@ private void Awake()
             {
                 arrcheck2[0] = arrcheck2[0] && true;
             }
+           
         }
-
+        string modifiedString = ReplaceSpacesWithCommas(errorWeek);
+        errorWeek = modifiedString;
        int max = Mathf.Max(arrKeepR);
         Debug.Log("time :" + max + " week");
         if (max > 32)
@@ -1110,6 +1168,7 @@ private void Awake()
    
     public bool checkitemAndFeature()
     {
+        errorfeature = "";
         bool saveAns = true;
         bool checkitemAndFeature = false;
         int[] getfail = new int[feature.Length];
@@ -1134,10 +1193,13 @@ private void Awake()
             {
                 if (getfail[i] == 1)
                 {
-                    Debug.Log(nameItem[i] + "not matech feature");
+                    errorfeature += (nameItem[i] + " , ");
+                    Debug.Log( nameItem[i] + " ยังไม่ Match กับ Feature หลัก");
 
                 }
             }
+            string modifiedString = ReplaceSpacesWithCommas(errorfeature);
+            errorfeature = modifiedString;
         }
         else
         {
