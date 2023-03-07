@@ -75,10 +75,15 @@ public class CtrlGame4 : MonoBehaviour
     public string errorWeek;
     public string errorfeature;
     public string errorPri;
+    public GameObject scrumhelp;
 
 
 
+    public void nonehelp()
+    {
 
+        scrumhelp.SetActive(false);
+    }
 
     public void sortGetNewPriority()
     {
@@ -918,6 +923,7 @@ private void Awake()
                 if (scoreMini4 <= 1)
                 {
                     scoreMini4 = 1;
+                    scrumhelp.SetActive(true);
                 }
                 heart[scoreMini4].gameObject.SetActive(false);
 

@@ -15,7 +15,7 @@ public class play2 : MonoBehaviour
     public Vector2 accountInitPos, chatInitPos, paymentInitPos, productInitPos, regisInitPos, profileInitPos;
     public double yaccount, ychat, ypayment, yproduct, yregis, yprofile;
     public GameObject miniheart1, miniheart2, miniheart3, miniheart4 ,miniheart5;
-    public GameObject Scrummaster,scrumwin;
+    public GameObject Scrummaster,scrumwin,scrumhelp;
     public int score = 5;
     public Text scoreText;
 
@@ -263,7 +263,12 @@ public class play2 : MonoBehaviour
         scrumwin.transform.SetAsLastSibling();
     }
 
+    public void nonehelp()
+    {
 
+        scrumhelp.SetActive(false);
+       
+    }
 
 
     public void checkPoint()
@@ -349,6 +354,12 @@ public class play2 : MonoBehaviour
             Debug.Log(userProfile.transform.position);
             Debug.Log(third.transform.position);
 
+
+            if(score <= 1)
+            {
+                score = 1;
+
+            }
             if (score == 4)
             {
                 scrum();
@@ -366,7 +377,8 @@ public class play2 : MonoBehaviour
             }
             else if (score == 1)
             {
-                scrum();
+                scrumhelp.SetActive(true);
+                scrumhelp.transform.SetAsLastSibling();
                 miniheart2.SetActive(false);
             }
 

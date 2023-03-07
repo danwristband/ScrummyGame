@@ -31,8 +31,14 @@ public class ButtonOnClick : MonoBehaviour
 	public string[] nicknametext;
 	public string[] checkRolltext;
 
+	public GameObject scrumhelp;
 
-	void Start()
+    public void nonehelp()
+    {
+        scrumhelp.SetActive(false);
+    }
+
+    void Start()
 	{
 		Button btn = yourButton.GetComponent<Button>();
 		btn.onClick.AddListener(TaskOnClick);
@@ -97,6 +103,7 @@ public class ButtonOnClick : MonoBehaviour
 
 		}
 	}
+
 
 
 void TaskOnClick()
@@ -164,6 +171,8 @@ void TaskOnClick()
 			if (score < 1)
 			{
 				score = 1;
+				scrumhelp.SetActive(true);
+
 			}
 			heart[score].gameObject.SetActive(false);
 			passtxt.text = "";
