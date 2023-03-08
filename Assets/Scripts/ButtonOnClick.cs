@@ -38,6 +38,14 @@ public class ButtonOnClick : MonoBehaviour
         scrumhelp.SetActive(false);
     }
 
+    public void knowladge()
+    {
+        PlayerPrefs.SetInt("mini1", score);
+        PlayerPrefs.SetInt("scDisplay", score);
+        SceneManager.LoadScene("Mini 1 know");
+    }
+
+
     void Start()
 	{
 		Button btn = yourButton.GetComponent<Button>();
@@ -97,7 +105,7 @@ public class ButtonOnClick : MonoBehaviour
 			PlayerPrefs.SetInt("mini1", score);
             PlayerPrefs.SetInt("scDisplay", score);
 			//LoadScenc
-			SceneManager.LoadScene("Score");
+			SceneManager.LoadScene("Mini 1 know");
 			passtxt.text = "";
 
 

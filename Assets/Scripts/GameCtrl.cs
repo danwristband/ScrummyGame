@@ -289,7 +289,8 @@ public class GameCtrl : MonoBehaviour
     public void Goto()
     {
         //PlayerPrefs.SetFloat("data", bath[0]);
-        SceneManager.LoadScene("Howto 1");
+       
+        SceneManager.LoadScene("Pre1 know");
 
     }
 }

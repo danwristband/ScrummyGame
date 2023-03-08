@@ -248,10 +248,11 @@ public class play2 : MonoBehaviour
 
 
 
-    public void gotoscore()
+    public void knowledge()
     {
-        
-        SceneManager.LoadScene("Score");
+        PlayerPrefs.SetInt("scDisplay", score);
+        PlayerPrefs.SetInt("mini3", score);
+        SceneManager.LoadScene("Mini 3 know");
     }
 
 

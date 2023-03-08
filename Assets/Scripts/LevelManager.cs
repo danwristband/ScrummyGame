@@ -70,6 +70,15 @@ public class LevelManager : MonoBehaviour
 
     public bool[] check;
 
+
+    public void knowladge()
+    {
+        SceneManager.LoadScene("Mini 1 know");
+    }
+
+
+
+
     void Start()
     {
 
@@ -84,8 +93,6 @@ public class LevelManager : MonoBehaviour
             position[i] = checkM[i].transform.parent;
             check333[i] = 2;
         } 
-        
-        
         
 
     }

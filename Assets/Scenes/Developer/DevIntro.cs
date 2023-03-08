@@ -105,7 +105,8 @@ public class DevIntro : MonoBehaviour
 
     public void finiteRetro()
     {
-        SceneManager.LoadScene("Sprint234");
+        SceneManager.LoadScene("Mini 5 know");
+        
 
     }
     public void onedaypart2()

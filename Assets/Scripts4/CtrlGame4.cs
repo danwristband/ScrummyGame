@@ -802,6 +802,15 @@ private void Awake()
 
     }
 
+    public void knowledge()
+    {
+        PlayerPrefs.SetInt("mini4", scoreMini4);
+        PlayerPrefs.SetInt("scDisplay", scoreMini4);
+        SceneManager.LoadScene("Mini 4 know");
+    }
+
+
+
     void Okay()
     {
         bgfade.gameObject.SetActive(false);
@@ -827,7 +836,7 @@ private void Awake()
             PlayerPrefs.SetInt("mini4", scoreMini4);
             PlayerPrefs.SetInt("scDisplay", scoreMini4);
             //load next scence mini5
-            SceneManager.LoadScene("Score");
+            SceneManager.LoadScene("Mini 4 know");
         }
     }
 

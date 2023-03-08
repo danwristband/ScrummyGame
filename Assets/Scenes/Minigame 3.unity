@@ -2695,7 +2695,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 301607479}
         m_TargetAssemblyTypeName: play2, Assembly-CSharp
-        m_MethodName: gotoscore
+        m_MethodName: knowledge
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3864,7 +3864,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 301607479}
         m_TargetAssemblyTypeName: play2, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: knowledge
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
