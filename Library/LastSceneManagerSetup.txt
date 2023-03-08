@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/Cut Scene.unity
-=======
 - path: Assets/Scenes/Story Telling/GameStarts.unity
->>>>>>> parent of e09b5833 (edit 9:12)
   isLoaded: 1
   isActive: 1
   isSubScene: 0
