@@ -6,6 +6,12 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedScenePath-0:
+<<<<<<< HEAD
+      value: 22424703114646680e0b0227036c7219181e1f2b212d6665621d1820f6e93a3fadd333faf333313b7717e1351027
+      flags: 0
+    RecentlyUsedScenePath-1:
+      value: 22424703114646680e0b0227036c7b15001214253c2d347f1e2a0f26efaf063df6f539cfee343e307717e1351027
+=======
       value: 22424703114646680e0b0227036c6c041905016a182d2a3c24271a7ce9ee3b2feee232eee2751235370baf6844350f30e5441c05ff1f13
       flags: 0
     RecentlyUsedScenePath-1:
@@ -19,8 +25,33 @@ EditorUserSettings:
       flags: 0
     RecentlyUsedScenePath-4:
       value: 22424703114646680e0b0227036c7219181e1f2b212d6662633c133af6f9
+>>>>>>> parent of e09b5833 (edit 9:12)
+      flags: 0
+    RecentlyUsedScenePath-2:
+      value: 22424703114646680e0b0227036c7b15001214253c2d347f1e2a0f26efaf0728f0ee38fda7083a282b0da1290a371526
+      flags: 0
+    RecentlyUsedScenePath-3:
+      value: 22424703114646680e0b0227036c7b15001214253c2d347f1e2a0f26efaf0728f0ee38fda7083a282b0dbd721130082beb
+      flags: 0
+    RecentlyUsedScenePath-4:
+      value: 22424703114646680e0b0227036c7b15001214253c2d347f1e2a0f26efaf0728f0ee38fda7083a2a3007f8721130082beb
       flags: 0
     RecentlyUsedScenePath-5:
+<<<<<<< HEAD
+      value: 22424703114646680e0b0227036c7b15001214253c2d347f1e2a0f26efaf0728f0ee38fda7083a2a3007f86e4a2b0f36e613
+      flags: 0
+    RecentlyUsedScenePath-6:
+      value: 22424703114646680e0b0227036c7b15001214253c2d347f1e2a0f26efaf073bf0f23ba9ce342b2e364cfa320d2a18
+      flags: 0
+    RecentlyUsedScenePath-7:
+      value: 22424703114646680e0b0227036c6b1505032b292926237e38271427fb
+      flags: 0
+    RecentlyUsedScenePath-8:
+      value: 22424703114646680e0b0227036c4b1f021614392f273435633c133af6f9
+      flags: 0
+    RecentlyUsedScenePath-9:
+      value: 22424703114646680e0b0227036c7c0502572b292926237e38271427fb
+=======
       value: 22424703114646680e0b0227036c7219181e1f2b212d6663633c133af6f9
       flags: 0
     RecentlyUsedScenePath-6:
@@ -34,6 +65,7 @@ EditorUserSettings:
       flags: 0
     RecentlyUsedScenePath-9:
       value: 22424703114646680e0b0227036c6c041905016a182d2a3c24271a7cc5e1393dd1f337fbf3297129370bfb25
+>>>>>>> parent of e09b5833 (edit 9:12)
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650

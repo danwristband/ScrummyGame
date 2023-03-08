@@ -19,9 +19,15 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
+<<<<<<< HEAD
+  m_Title: Project
+  m_RootView: {fileID: 2}
+  m_MinSize: {x: 875, y: 300}
+=======
   m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 542}
+>>>>>>> parent of e09b5833 (edit 9:12)
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -45,7 +51,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1536
+<<<<<<< HEAD
+    height: 780.8
+=======
     height: 772.8
+>>>>>>> parent of e09b5833 (edit 9:12)
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -118,11 +128,19 @@ MonoBehaviour:
     x: 0
     y: 30
     width: 1536
+<<<<<<< HEAD
+    height: 730.8
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
+  vertical: 0
+  controlID: 158
+=======
     height: 722.8
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
   controlID: 17
+>>>>>>> parent of e09b5833 (edit 9:12)
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,11 +161,19 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1260
+<<<<<<< HEAD
+    height: 730.8
+  m_MinSize: {x: 403, y: 492}
+  m_MaxSize: {x: 10001, y: 14042}
+  vertical: 1
+  controlID: 90
+=======
     height: 722.8
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
   controlID: 63
+>>>>>>> parent of e09b5833 (edit 9:12)
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +198,11 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
+<<<<<<< HEAD
+  controlID: 91
+=======
   controlID: 64
+>>>>>>> parent of e09b5833 (edit 9:12)
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -244,7 +274,11 @@ MonoBehaviour:
     x: 0
     y: 451.2
     width: 1260
+<<<<<<< HEAD
+    height: 274.8
+=======
     height: 271.59998
+>>>>>>> parent of e09b5833 (edit 9:12)
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 15}
@@ -398,7 +432,11 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
+<<<<<<< HEAD
+      m_ExpandedIDs: 6cfbffff
+=======
       m_ExpandedIDs: 860fffff3c86ffff488bfffffeaaffff0eb2ffffb2b2ffff76b4ffff24a0000078a60000b0b5000032b60000
+>>>>>>> parent of e09b5833 (edit 9:12)
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -576,22 +614,37 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
+    - Assets/Scenes
+=======
     - Assets/Scenes/Story Telling
+>>>>>>> parent of e09b5833 (edit 9:12)
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 68
   m_LastFolders:
+<<<<<<< HEAD
+  - Assets/Scenes
+=======
   - Assets/Scenes/Story Telling
+>>>>>>> parent of e09b5833 (edit 9:12)
   m_LastFoldersGridSize: 68
   m_LastProjectPath: D:\CPE4-2\project492\GitHub\ScrummyGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
+    scrollPos: {x: 0, y: 294.2}
+    m_SelectedIDs: 4c570000
+    m_LastClickedID: 22348
+    m_ExpandedIDs: 000000003457000036570000385700003a5700003c5700003e57000040570000425700004457000046570000485700004a5700004c5700004e5700005057000052570000545700007c57000000ca9a3b
+=======
     scrollPos: {x: 0, y: 297.40002}
     m_SelectedIDs: d49c0000
     m_LastClickedID: 40148
     m_ExpandedIDs: 00000000b69c0000b89c0000ba9c0000bc9c0000be9c0000c09c0000c29c0000c49c0000c69c0000c89c0000ca9c0000cc9c0000ce9c0000d09c0000d29c0000d49c0000d69c0000de9c000000ca9a3b
+>>>>>>> parent of e09b5833 (edit 9:12)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -619,7 +672,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
+    m_ExpandedIDs: 000000003457000036570000385700003a5700003c5700003e57000040570000425700004457000046570000485700004a5700004c5700004e570000505700005257000054570000
+=======
     m_ExpandedIDs: 00000000b69c0000b89c0000ba9c0000bc9c0000be9c0000c09c0000c29c0000c49c0000c69c0000c89c0000ca9c0000cc9c0000ce9c0000d09c0000d29c0000d49c0000d69c0000
+>>>>>>> parent of e09b5833 (edit 9:12)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
